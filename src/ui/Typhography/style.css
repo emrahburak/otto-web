@@ -1,0 +1,48 @@
+.text-heading {
+  font-family: "Candal", "Arial", "Helvetica", sans-serif;
+}
+
+.text-title {
+  font-family: "Candal";
+}
+
+.text-paragraph {
+  font-family: "Candal";
+}
+
+.text-link {
+  font-family: "Candal";
+}
+
+.font-size--sm {
+  font-size: 1rem;
+}
+
+.font-size--md {
+  font-size: 1.5rem;
+}
+
+.font-size--lg {
+  font-size: 2rem;
+}
+
+.text-color {
+  color: black;
+}
+
+/* Font-weight sınıfları */
+.font-weight-normal {
+  font-weight: 400; /* Normal */
+}
+
+.font-weight-medium {
+  font-weight: 500; /* Medium */
+}
+
+.font-weight-semibold {
+  font-weight: 600; /* Semibold */
+}
+
+.font-weight-bold {
+  font-weight: 700; /* Bold */
+}

@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Candal&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Candal", sans-serif;
+}
