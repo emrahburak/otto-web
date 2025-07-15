@@ -1,10 +1,108 @@
-import { Title } from "../../ui/Typhography"
+import { Link } from "react-router-dom";
+import ottoLogo from "@/assets/otto-logo-rbg.png"
 
-export const Footer = (props: {}) => {
+
+
+
+const bottomImage:string = "https://themounty.ancorathemes.com/wp-content/uploads/2018/04/bg-footer.png?id=558"
+
+interface FooterLink {
+  id: number;
+  name: string;
+  link: string;
+}
+
+interface FooterLinkGroup {
+  title: string;
+  links: FooterLink[];
+}
+
+
+
+const footerLinkGroups: FooterLinkGroup[] = [
+  {
+    title: "Bilgi",
+    links: [
+      { id: 1, name: "Hakkımızda", link: "/about" },
+      { id: 2, name: "Kariyer", link: "/careers" },
+      { id: 3, name: "Blog", link: "/blog" },
+    ],
+  },
+  {
+    title: "Kampımız",
+    links: [
+      { id: 4, name: "Konaklama", link: "/accommodation" },
+      { id: 5, name: "Fiyatlandırma", link: "/pricing" },
+      { id: 6, name: "S.S.S.", link: "/faq" },
+    ],
+  },
+  {
+    title: "Rezervasyon",
+    links: [
+      { id: 7, name: "İletişim", link: "/contact" },
+      { id: 8, name: "Destek", link: "/support" },
+      { id: 9, name: "Gizlilik", link: "/privacy" },
+    ],
+  },
+  {
+    title: "Aktiviteler",
+    links: [
+      { id: 10, name: "Atölyeler", link: "/workshops" },
+      { id: 11, name: "Sporlar", link: "/sports" },
+      { id: 12, name: "Doğa Yürüyüşü", link: "/hiking" },
+    ],
+  },
+];
+
+
+export const Footer = () => {
   return (
-        <div>
-            <Title className="text-black " size="sm">Footer</Title>
+    <footer className="relative w-full">
+      <div className="w-full  flex items-center justify-center">
+        <div className="w-3/4 mx-auto grid grid-cols-5 gap-2">
+          {footerLinkGroups.slice(0, 2).map((group) => (
+            <div key={group.title} className="flex flex-col gap-2">
+              <h4 className="text-gray-900 font-display">{group.title}</h4>
+              {group.links.map((link) => (
+                <Link key={link.id} to={link.link} className="text-gray-600 hover:text-gray-900 font-display-02">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          ))}
+
+          {/* Orta Logo */}
+          <Link to="/" className="flex items-center justify-center">
+            <img src={ottoLogo} alt="Logo" className="w-auto" />
+          </Link>
+
+          {footerLinkGroups.slice(2).map((group) => (
+            <div key={group.title} className="flex flex-col gap-2">
+              <h4 className="text-lg  text-gray-900 font-display">{group.title}</h4>
+              {group.links.map((link) => (
+                <Link key={link.id} to={link.link} className="text-gray-600 hover:text-gray-900 font-display-02">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          ))}
         </div>
+
+
+      </div>
+
+
+      {/* Alt kısma arka plan görseli */}
+      <div className="w-full">
+        <img
+          src={bottomImage}
+          alt="footer pattern"
+          className="w-full h-auto"
+        />
+      </div>
+
+
+    </footer>
 
   )
 }

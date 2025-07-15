@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Candal&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&family=Bree+Serif&display=swap");
 
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Candal", sans-serif;
+  --font-display: "Paytone One", sans-serif;
+  --font-display-02: "Bree Serif", Serif;
+  --color-orange-01: oklch(0.7111 0.235 48.57);
 }
