@@ -57,7 +57,7 @@ const footerLinkGroups: FooterLinkGroup[] = [
 
 export const Footer = () => {
   return (
-    <footer className="relative w-full">
+    <footer className="relative w-full pt-20">
       <div className="w-full  flex items-center justify-center">
         <div className="w-3/4 mx-auto grid grid-cols-5 gap-2">
           {footerLinkGroups.slice(0, 2).map((group) => (

@@ -59,7 +59,7 @@ export const Header = () => {
 
       <header className="sticky top-0 z-50 bg-white shadow transition-all duration-300 ">
 
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-row items-center gap-2">
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-row items-center gap-2 pl-5">
           <div className="flex flex-row items-center gap-2">
             {socialButons.map(btn => (
               <Button key={btn.id} className=" w-12 h-12 py-1 px-2 text-white text-xl  rounded-3xl" {...btn} ></Button>
@@ -93,7 +93,7 @@ export const Header = () => {
           />
         </div>
 
-        <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-row gap-4">
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-row gap-4 pr-5">
           {/* Menü linkleri */}
           {headLinks.map((item) => (
             <Heading size="sm" key={item.id} className="font-display">
