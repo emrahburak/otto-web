@@ -36,7 +36,8 @@ const socialButons: socialButton[] = [
 const headLinks: headLink[] = [
   { id: 1, name: 'ANASAYFA', link: '/' },
   { id: 2, name: 'HAKKIMIZDA', link: '/about' },
-  { id: 3, name: 'İLETİŞİM', link: '/contact' }
+  { id: 3, name: 'İLETİŞİM', link: '/contact' },
+  { id: 4, name: 'AKTİVİTELER', link: '/activites' }
 ]
 
 export const Header = () => {
