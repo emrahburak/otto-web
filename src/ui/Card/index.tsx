@@ -1,7 +1,6 @@
 import type { CardData } from "../../types/CardData"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { Button } from "../Button";
 import { Link } from "react-router-dom";
 
 

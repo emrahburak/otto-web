@@ -9,7 +9,6 @@ import 'swiper/css/pagination';
 import { Autoplay } from 'swiper/modules';
 import type { CardData } from '../../types/CardData';
 import Card from '../../ui/Card';
-import { Button } from '../../ui/Button';
 import { Link } from 'react-router-dom';
 
 
