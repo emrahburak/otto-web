@@ -1,10 +1,10 @@
 import type { CardData } from "../types/CardData";
 
-import dramaLogo from "@/assets/otto-category-01.jpg";
-import comlekLogo from "@/assets/otto-category-03.jpg";
-import kuklaLogo from "@/assets/otto-category-02.jpg";
-import yazOkuluLogo from "@/assets/otto-category-05.jpg";
-import ciftciLogo from "@/assets/otto-category-04.jpg";
+import dramaLogo from "@/assets/otto-category-drama.png";
+import kuklaLogo from "@/assets/otto-category-kukla.png";
+import comlekLogo from "@/assets/otto-category-comlek.png";
+import ciftciLogo from "@/assets/otto-category-ciftci.png";
+import yazOkuluLogo from "@/assets/otto-category-yaz-okulu.png";
 
 export const workshops: CardData[] = [
   {

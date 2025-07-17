@@ -5,25 +5,35 @@ interface CardProps {
 }
 
 export default function Card({ items }: CardProps) {
-  const { title, description, image } = items;
+  const { title, description, image, variant } = items;
+
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-6 h-full flex flex-col justify-between">
+    <div className={`
+          ${variant === "default" && "rounded-xl shadow-md p-7 h-full flex flex-col gap-5 bg-white  text-gray-02 w-full max-w-[296px] min-h-[384px]"}
+      `}>
       {image ? (
+
         <img
           src={image}
           alt={title}
-          className="w-full h-40 object-cover rounded-lg mb-4"
+          className={
+            `${variant === "default" && "w-40 h-40 object-cover  mx-auto"}`
+          }
         />
       ) : (
-        <div className="w-full h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm">
+        <div className={`
+          ${variant === "default" && "w-full h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm "}
+          `}>
           Görsel yok
         </div>
       )}
-      <div>
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <div className="grid grid-cols-1 gap-2">
+        <h3 className={`${variant === "default" && "text-lg font-semibold mb-2 text-center font-display text-black"}
+          `}>{title}</h3>
         {description && (
-          <p className="text-gray-600 text-sm leading-relaxed">
+          <p className={`
+            ${variant === "default" && "text-gray-600 text-sm leading-relaxed text-center font-display-02"}`}>
             {description}
           </p>
         )}

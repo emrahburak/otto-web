@@ -5,7 +5,7 @@ import { faXTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-sv
 import { faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
 import type React from "react";
 import { Button } from "../../ui/Button";
-import ottoLogo from "@/assets/otto-logo-rbg.png"
+import ottoLogo from "@/assets/otto-logo.png"
 import { useEffect, useState } from "react";
 
 
