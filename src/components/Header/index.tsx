@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
-import type React from "react";
-import { Button } from "../../ui/Button";
 import ottoLogo from "@/assets/otto-logo.png"
 import { useEffect, useState } from "react";
 import { SocialButtons } from "../../ui/SocialButtons";
