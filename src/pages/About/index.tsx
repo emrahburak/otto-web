@@ -1,9 +1,22 @@
-import { Title } from "../../ui/Typhography";
+import AboutField from "../../components/AboutField";
+import BreadCrumb from "../../components/BreadCrumb";
+import Team from "../../components/Team";
+import { teamMembers } from "../../data/teamData";
 
-export default function AboutPage(){
-    return (
-        <div>
-            <Title className="text-black " size="lg">About me</Title>
-        </div>
-    )
+
+
+
+export default function AboutPage() {
+  return (
+    <div>
+      <BreadCrumb
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Hakkımızda" }
+        ]}
+      />
+      <AboutField />
+      <Team members={teamMembers}/>
+    </div>
+  )
 }
