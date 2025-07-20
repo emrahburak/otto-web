@@ -11,7 +11,7 @@ export default function AboutPage() {
     <div>
       <BreadCrumb
         items={[
-          { label: "Home", href: "/" },
+          { label: "Anasayfa", href: "/" },
           { label: "Hakkımızda" }
         ]}
       />

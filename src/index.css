@@ -10,3 +10,11 @@
   --color-gray-02: oklch(0.627 0 0);
   --color-green-01: oklch(0.6928 0.1742 142.73);
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}

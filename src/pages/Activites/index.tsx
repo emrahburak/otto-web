@@ -1,6 +1,17 @@
+import BreadCrumb from "../../components/BreadCrumb";
+
 export default function ActivitesPage() {
   return (
-    <div>Aktiviteler</div>
+    <>
+      <BreadCrumb
+        items={[
+          { label: "Anasayfa", href: "/" },
+          { label: "Aktiviteler" }
+        ]}
+      />
+
+    </>
+
   )
 }
 

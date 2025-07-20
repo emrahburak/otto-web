@@ -12,8 +12,8 @@ export default function BreadCrumb({ items }: BreadCrumbProps) {
     <nav aria-label="breadcrumb" className=" min-h-[288px] bg-[url(@/assets/bg-heading.png)] bg-auto bg-no-repeat  mt-5 flex  items-center justify-center " >
       <div >
         <div>
-          <h1 className="text-3xl text-white font-bold font-display ">
-            {items[items.length - 1]?.label.toUpperCase()}
+          <h1 className="text-3xl text-white font-bold font-display text-center ">
+            {items[items.length - 1]?.label.toUpperCase().replace("I","İ")}
           </h1>
 
         </div>

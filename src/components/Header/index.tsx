@@ -53,7 +53,7 @@ export const Header = () => {
   return (
     <>
 
-      <header className="sticky top-0 z-50 bg-white shadow transition-all duration-300  min-h-[6rem]">
+      <header className="sticky top-0 z-50 bg-white shadow transition-all duration-300  min-h-[6rem] w-full">
 
         <div className="absolute left-4 top-1/2 -translate-y-1/2  flex-row items-center gap-2 pl-5  xl:hidden " >
 
