@@ -7,6 +7,7 @@ import ottoLogo from "@/assets/otto-logo.png"
 import { useEffect, useState } from "react";
 import { SocialButtons } from "../../ui/SocialButtons";
 import type { socialButton } from "../../types/SocialButtons";
+import { Button } from "../../ui/Button";
 
 
 
@@ -50,17 +51,23 @@ export const Header = () => {
   return (
     <>
 
-      <header className="sticky top-0 z-50 bg-white shadow transition-all duration-300 ">
+      <header className="sticky top-0 z-50 bg-white shadow transition-all duration-300  min-h-[6rem]">
 
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 flex flex-row items-center gap-2 pl-5">
+        <div className="absolute left-4 top-1/2 -translate-y-1/2  flex-row items-center gap-2 pl-5  xl:hidden " >
 
-        <SocialButtons items={socialButons} variant="default"/>
+          <img
+            src={ottoLogo}
+            alt="Logo"
+            className={`transition-all duration-300 mx-auto ${scrolled ? "max-h-[4em]" : "max-h-[7.5em]"
+              }`}
+          />
+        </div>
 
-          {/* <div className="flex flex-row items-center gap-2"> */}
-          {/*   {socialButons.map(btn => ( */}
-          {/*     <Button key={btn.id} className=" w-12 h-12 py-1 px-2 text-white text-xl  rounded-3xl" {...btn} ></Button> */}
-          {/*   ))} */}
-          {/* </div> */}
+
+        <div className="absolute left-4 top-1/2 -translate-y-1/2  flex-row items-center gap-2 pl-5 hidden xl:flex " >
+
+          <SocialButtons items={socialButons} variant="default" />
+
 
           <div className="flex flex-row items-center justify-start gap-2 border-l-3 border-gray-200 pl-3 ">
             <div className="rounded-full px-1.5 py-0.5 border-2 border-orange-01">
@@ -81,7 +88,8 @@ export const Header = () => {
         </div>
 
 
-        <div className="flex justify-center">
+        <div className="xl:flex justify-center hidden ">
+
           <img
             src={ottoLogo}
             alt="Logo"
@@ -93,11 +101,16 @@ export const Header = () => {
         <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-row gap-4 pr-5">
           {/* Menü linkleri */}
           {headLinks.map((item) => (
-            <Heading size="sm" key={item.id} className="font-display">
-              <Link to={item.link}>{item.name}</Link>
-            </Heading>
+            <Button key={item.id}>
+              <Heading size="sm"  className="font-display">
+                <Link to={item.link}>{item.name}</Link>
+              </Heading>
+
+            </Button>
           ))}
         </div>
+
+
       </header>
 
     </>

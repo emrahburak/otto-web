@@ -1,7 +1,7 @@
 
 
 export const Button = (props: any) => {
-  const { className = "", icon , style, link} = props
+  const { className = "",  style, } = props
 
   return (
     <button
@@ -10,14 +10,9 @@ export const Button = (props: any) => {
       `}
       style={style}
     >
-    <a href={link} className="w-full h-full" target="_blank">
-      <span id="icon">
-        {icon}
-      </span>
 
       {props.children}
 
-    </a>
     </button>
   )
 }

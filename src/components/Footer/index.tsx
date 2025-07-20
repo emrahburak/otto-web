@@ -57,9 +57,9 @@ const footerLinkGroups: FooterLinkGroup[] = [
 
 export const Footer = () => {
   return (
-    <footer className="relative w-full pt-20">
+    <footer className="relative w-full pt-20 min-w-screen">
       <div className="w-full  flex items-center justify-center">
-        <div className="w-3/4 mx-auto grid grid-cols-5 gap-2">
+        <div className="xl:w-3/4 w-1/2 mx-auto grid xl:grid-cols-5 grid-cols-2 gap-2">
           {footerLinkGroups.slice(0, 2).map((group) => (
             <div key={group.title} className="flex flex-col gap-2">
               <h4 className="text-gray-900 font-display">{group.title}</h4>
@@ -72,15 +72,15 @@ export const Footer = () => {
           ))}
 
           {/* Orta Logo */}
-          <Link to="/" className="flex items-center justify-center">
+          <Link to="/" className="xl:flex items-center justify-center hidden">
             <img src={ottoLogo} alt="Logo" className="w-auto" />
           </Link>
 
           {footerLinkGroups.slice(2).map((group) => (
             <div key={group.title} className="flex flex-col gap-2">
-              <h4 className="text-lg  text-gray-900 font-display">{group.title}</h4>
+              <h4 className="text-lg  text-gray-900 font-display ">{group.title}</h4>
               {group.links.map((link) => (
-                <Link key={link.id} to={link.link} className="text-gray-600 hover:text-gray-900 font-display-02">
+                <Link key={link.id} to={link.link} className="text-gray-600 hover:text-gray-900 font-display-02 ">
                   {link.name}
                 </Link>
               ))}
