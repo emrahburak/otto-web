@@ -1,5 +1,4 @@
-import { Heading } from "../../ui/Typhography";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
@@ -35,7 +34,10 @@ const headLinks: headLink[] = [
 
 export const Header = () => {
 
+  const location = useLocation()
   const [scrolled, setScrolled] = useState(false)
+
+
 
 
   useEffect(() => {
@@ -100,14 +102,19 @@ export const Header = () => {
 
         <div className="absolute right-4 top-1/2 -translate-y-1/2 flex flex-row gap-4 pr-5">
           {/* Menü linkleri */}
-          {headLinks.map((item) => (
-            <Button key={item.id}>
-              <Heading size="sm"  className="font-display">
-                <Link to={item.link}>{item.name}</Link>
-              </Heading>
 
-            </Button>
-          ))}
+          {headLinks.map((item) => {
+            const isActive = location.pathname === item.link
+            return (
+              <Button key={item.name} className={`font-display 
+                ${isActive
+                  ? "rounded-full px-4 py-2 bg-orange-01 text-white"
+                  : "text-black"}
+                `} >
+                <Link to={item.link}>{item.name}</Link>
+              </Button>
+            );
+          })}
         </div>
 
 
