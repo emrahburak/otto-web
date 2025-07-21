@@ -32,11 +32,11 @@ export default function Carousel({ cards }: CarouselProps) {
           }}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
           modules={[Autoplay]}
-          className="max-w-6xl mx-auto  "
+          className="w-full max-w-6xl mx-auto overflow-hidden "
         >
           {cards.map((card, idx) => (
-            <SwiperSlide key={idx}>
-              <Card items={card} />
+            <SwiperSlide key={idx} >
+                <Card items={card} />
             </SwiperSlide>
           ))}
         </Swiper>

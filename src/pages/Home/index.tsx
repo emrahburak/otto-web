@@ -8,7 +8,7 @@ import { workshops } from "../../data/workshop";
 
 export default function HomePage() {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <Slide slides={slides} />
       <AboutField />
       <Carousel cards={workshops} />

@@ -4,7 +4,14 @@
 
 
 export const Button = (props: any) => {
-  const { className = "",  style, type="button" } = props
+  const {
+    className = "",
+    style,
+    type = "button",
+    onClick, // ← Eksikti, ekliyoruz
+    children,
+    ...rest // opsiyonel: diğer prop’ları alabilsin diye
+  } = props;
 
   return (
     <button type={type}
@@ -12,6 +19,8 @@ export const Button = (props: any) => {
         ${className}
       `}
       style={style}
+      onClick={onClick}
+      {...rest}
     >
 
       {props.children}
