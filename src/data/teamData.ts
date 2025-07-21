@@ -14,7 +14,6 @@ export const teamMembers: CardData[] = [
       ],
     },
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-    variant: "team",
   },
   {
     id: 2,
@@ -29,7 +28,6 @@ export const teamMembers: CardData[] = [
       ],
     },
     image: "https://randomuser.me/api/portraits/men/32.jpg",
-    variant: "team",
   },
   {
     id: 3,
@@ -44,6 +42,5 @@ export const teamMembers: CardData[] = [
       ],
     },
     image: "https://randomuser.me/api/portraits/women/65.jpg",
-    variant: "team",
   },
 ];

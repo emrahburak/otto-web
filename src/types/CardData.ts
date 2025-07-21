@@ -19,5 +19,4 @@ export interface CardData {
   description?: string;
   image?: string;
   href?: string;
-  variant?: "default" | "team" | "featured";
 }

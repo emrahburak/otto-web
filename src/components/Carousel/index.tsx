@@ -48,9 +48,7 @@ export default function Carousel({ cards }: CarouselProps) {
           {cards.map((card, idx) => (
             <SwiperSlide key={idx} className='flex justify-center ' style={{overflow:"visible"}} >
               <div className='w-full max-w-[296px] h-full min-h-[384px]'>
-                <Card items={card} />
-
-
+                <Card items={card} variant='default'/>
               </div>
             </SwiperSlide>
           ))}

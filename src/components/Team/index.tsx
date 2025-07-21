@@ -14,10 +14,9 @@ export default function Team({ members }: TeamProps) {
         <h1 className='font-display text-center font-normal text-4xl'>Ekibimizle Tanışın</h1>
         <div className="flex justify-center gap-6 flex-wrap">
           {members.map(member => (
-            <Card key={member.id} items={member} />
+            <Card key={member.id} items={member} variant="team" />
           ))}
         </div>
-
 
       </div>
     </>

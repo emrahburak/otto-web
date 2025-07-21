@@ -1,4 +1,6 @@
+import ActiviteField from "../../components/ActiviteField";
 import BreadCrumb from "../../components/BreadCrumb";
+import { workshops } from "../../data/workshop";
 
 export default function ActivitesPage() {
   return (
@@ -9,7 +11,7 @@ export default function ActivitesPage() {
           { label: "Aktiviteler" }
         ]}
       />
-
+      <ActiviteField cards={workshops} />
     </>
 
   )

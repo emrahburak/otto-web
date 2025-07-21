@@ -13,7 +13,6 @@ export const workshops: CardData[] = [
     description:
       "Nunc gravida turpis ullamcorper efficitur, molestie dignissim tortor dignissim arcu.",
     image: dramaLogo,
-    variant: "default",
   },
   {
     id: 2,
@@ -21,7 +20,6 @@ export const workshops: CardData[] = [
     description:
       "Rhoncus sapien lorem, diam nullam elit porta, consequat nulla aliquam.",
     image: comlekLogo,
-    variant: "default",
   },
   {
     id: 3,
@@ -29,7 +27,6 @@ export const workshops: CardData[] = [
     description:
       "Nunc, maecenas arcu at, vel phasellus nam integer venenatis cursus.  ",
     image: ciftciLogo,
-    variant: "default",
   },
   {
     id: 4,
@@ -37,7 +34,6 @@ export const workshops: CardData[] = [
     description:
       "Vestibulum pharetra, tortor, cras consectetur parturient tempor nullam condimentum eu.",
     image: kuklaLogo,
-    variant: "default",
   },
   {
     id: 5,
@@ -45,6 +41,5 @@ export const workshops: CardData[] = [
     description:
       "Est neque, nunc, eros turpis porta condimentum tortor sed nulla.",
     image: yazOkuluLogo,
-    variant: "default",
   },
 ];
