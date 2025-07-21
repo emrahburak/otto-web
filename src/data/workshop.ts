@@ -10,36 +10,49 @@ export const workshops: CardData[] = [
   {
     id: 1,
     title: "Online Drama Eğitimi",
-    description:
-      "Nunc gravida turpis ullamcorper efficitur, molestie dignissim tortor dignissim arcu.",
+    description: "Hayal gücünü keşfet, rol yaparak ifade becerini geliştir.",
     image: dramaLogo,
   },
   {
     id: 2,
     title: "Çömlek Atölyesi",
-    description:
-      "Rhoncus sapien lorem, diam nullam elit porta, consequat nulla aliquam.",
+    description: "Toprakla şekil ver, ellerinle hayalini yoğur.",
     image: comlekLogo,
   },
   {
     id: 3,
     title: "Çiftçi Çocuk Atölyesi",
-    description:
-      "Nunc, maecenas arcu at, vel phasellus nam integer venenatis cursus.  ",
+    description: "Toprağa dokun, doğayla dost ol, üretmenin keyfini yaşa.",
     image: ciftciLogo,
   },
   {
     id: 4,
     title: "Kukla Atölyesi",
-    description:
-      "Vestibulum pharetra, tortor, cras consectetur parturient tempor nullam condimentum eu.",
+    description: "Kendi kuklanı yap, ona hayat ver ve sahneye taşı.",
     image: kuklaLogo,
   },
   {
     id: 5,
     title: "Yaz Okulu",
-    description:
-      "Est neque, nunc, eros turpis porta condimentum tortor sed nulla.",
+    description: "Dolu dolu bir yaz: keşif, doğa, oyun ve yeni arkadaşlar.",
+    image: yazOkuluLogo,
+  },
+  {
+    id: 6,
+    title: "Mutfak Atölyesi",
+    description: "Minik aşçılar için eğlenceli ve sağlıklı tarifler.",
+    image: yazOkuluLogo,
+  },
+  {
+    id: 7,
+    title: "Binicilik Atölyesi",
+    description: "Atlarla tanış, doğayla uyum içinde denge kur.",
+    image: yazOkuluLogo,
+  },
+  {
+    id: 8,
+    title: "Kamp ve Çadır Atölyesi",
+    description: "Doğada kamp kur, ekip ol ve birlikte yaşamayı öğren.",
     image: yazOkuluLogo,
   },
 ];

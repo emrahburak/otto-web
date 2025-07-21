@@ -8,6 +8,7 @@ import { SocialButtons } from "../../ui/SocialButtons";
 import type { socialButton } from "../../types/SocialButtons";
 import { Button } from "../../ui/Button";
 import type { headLink } from "../../types/headlink";
+import { ContactData } from "../../data/contact";
 
 
 
@@ -18,7 +19,7 @@ import type { headLink } from "../../types/headlink";
 const socialButons: socialButton[] = [
   { id: 1, name: "facebook", icon: <FontAwesomeIcon icon={faFacebook} className="text-lg" />, href: "https://www.facebook.com/", style: { backgroundColor: "#f2682a" } },
   { id: 2, name: "x", icon: <FontAwesomeIcon icon={faXTwitter} className="text-lg" />, href: "https://x.com/home?lang=tr", style: { backgroundColor: "#5b9a42" } },
-  { id: 3, name: "instagram", icon: <FontAwesomeIcon icon={faInstagram} className="text-lg" />, href: "https://www.instagram.com/", style: { backgroundColor: "#efc429" } }
+  { id: 3, name: "instagram", icon: <FontAwesomeIcon icon={faInstagram} className="text-lg" />, href: "https://www.instagram.com/ottodogaokulu/", style: { backgroundColor: "#efc429" } }
 ]
 
 
@@ -35,6 +36,7 @@ export const Header = ({ onToggleMenu,menuItems }: HeaderProps) => {
 
   const location = useLocation()
   const [scrolled, setScrolled] = useState(false)
+  const contactData = ContactData
 
 
 
@@ -75,7 +77,7 @@ export const Header = ({ onToggleMenu,menuItems }: HeaderProps) => {
               <FontAwesomeIcon icon={faPhone} className="text-lg text-orange-01" />
             </div>
             <span className="text-sm font-semibold">
-              5555 555 555
+              {contactData.phone}
             </span>
           </div>
           <div className="flex flex-row items-center justify-start gap-2 border-l-3 border-gray-200 pl-3 ">
@@ -83,7 +85,7 @@ export const Header = ({ onToggleMenu,menuItems }: HeaderProps) => {
               <FontAwesomeIcon icon={faAt} className="text-2xl  text-orange-01" />
             </div>
             <span className="text-sm font-semibold">
-              mail@mail.info
+              {contactData.mail}
             </span>
           </div>
         </div>

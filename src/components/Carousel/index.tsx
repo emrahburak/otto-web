@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 
 
 // import required modules
-import { Autoplay} from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import type { CardData } from '../../types/CardData';
 import Card from '../../ui/Card';
 import { Link } from 'react-router-dom';
@@ -27,6 +27,11 @@ export default function Carousel({ cards }: CarouselProps) {
           loop={true}
           pagination={{ clickable: true }}
           breakpoints={{
+            375: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+
             640: {
               slidesPerView: 2,
               spaceBetween: 20,
@@ -42,13 +47,12 @@ export default function Carousel({ cards }: CarouselProps) {
           }} autoplay={{ delay: 3500, disableOnInteraction: false }}
           modules={[Autoplay]}
           className="w-full overflow-hidden mx-auto max-w-full sm:max-w-xl md:max-w-4xl lg:max-w-6xl"
-
         >
 
           {cards.map((card, idx) => (
-            <SwiperSlide key={idx} className='flex justify-center ' style={{overflow:"visible"}} >
-              <div className='w-full max-w-[296px] h-full min-h-[384px]'>
-                <Card items={card} variant='default'/>
+            <SwiperSlide key={idx} className='flex justify-center ' style={{ overflow: "visible" }} >
+              <div className='w-full max-w-[296px]  h-full max-h-[384px] mx-auto'>
+                <Card items={card} variant='default' />
               </div>
             </SwiperSlide>
           ))}

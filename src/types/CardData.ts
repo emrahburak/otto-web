@@ -1,10 +1,10 @@
-type socialLinks = {
+export type socialLinks = {
   id: number;
   title: string;
   href: string;
 };
 
-type User = {
+export type User = {
   id: number;
   name: string;
   position?: string;

@@ -16,11 +16,11 @@ export default function Card({ items, variant }: CardProps) {
   return (
     <div className={`
       group 
-          ${variant === "default" || variant === "activite" ? " relative pb-6 cursor-grab" : ""}
+          ${variant === "default" || variant === "activite" ? " relative pb-6 cursor-grab h-full w-full" : ""}
           ${variant === "team" ? "w-[400px] h-[400px] relative overflow-hidden cursor-pointer" : ""}
       `}>
       <div className={`
-  ${variant === "default" || variant === "activite" ? "shadow-md p-7 flex flex-col gap-5 text-gray-02 w-full max-w-[296px] h-full min-h-[384px]" : ""}
+  ${variant === "default" || variant === "activite" ? "shadow-md p-7 flex flex-col gap-5 text-gray-02 w-full h-full" : ""}
   ${variant === "default" ? "bg-white" : ""}
   ${variant === "activite" ? "bg-gray-01" : ""}
 `}>        {image ? (
@@ -57,7 +57,7 @@ export default function Card({ items, variant }: CardProps) {
           to="/"
           className={`
       absolute left-1/2 translate-x-[-50%] bottom-3 p-2 rounded-full 
-      text-center w-fit h-fit z-20 text-green-01 hover:text-white text-xl 
+      text-center w-fit h-fit z-10 text-green-01 hover:text-white text-xl 
       transition-all duration-300 ease-in-out 
       ${variant === "default" ? "bg-gray-01 hover:bg-green-01" : ""}
       ${variant === "activite" ? "bg-white hover:bg-green-01" : ""}
