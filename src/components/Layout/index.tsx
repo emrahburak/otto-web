@@ -10,8 +10,8 @@ import type { headLink } from "../../types/headlink";
 const menuItems: headLink[] = [
   { id: 1, name: 'ANASAYFA', link: '/' },
   { id: 2, name: 'HAKKIMIZDA', link: '/about' },
-  { id: 3, name: 'İLETİŞİM', link: '/contact' },
-  { id: 4, name: 'AKTİVİTELER', link: '/activites' }
+  { id: 3, name: 'AKTİVİTELER', link: '/activites' },
+  { id: 4, name: 'İLETİŞİM', link: '/contact' },
 ]
 
 export default function Layout() {
