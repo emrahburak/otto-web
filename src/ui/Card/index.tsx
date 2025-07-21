@@ -19,7 +19,7 @@ export default function Card({ items }: CardProps) {
           ${variant === "team" ? "w-[400px] h-[400px] relative overflow-hidden cursor-pointer" : ""}
       `}>
       <div className={`
-          ${variant === "default" ? " shadow-md p-7 h-full flex flex-col gap-5 bg-white  text-gray-02 w-full max-w-[296px] min-h-[384px] " : ""}
+          ${variant === "default" ? " shadow-md p-7  flex flex-col gap-5 bg-white  text-gray-02 w-full max-w-[296px] h-full min-h-[384px] " : ""}
       `}>
         {image ? (
 
