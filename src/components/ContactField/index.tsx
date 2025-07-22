@@ -1,7 +1,8 @@
 
-import React, {  useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 import { Button } from '../../ui/Button';
+import { toast } from "sonner"
 
 interface FormRenderProps {
   handleChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
@@ -13,7 +14,7 @@ interface FormRenderProps {
 const ContactField = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
-  const handleInputChange = (e:any) => {
+  const handleInputChange = (e: any) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -23,17 +24,21 @@ const ContactField = () => {
       {({ handleChange, success, error }: FormRenderProps) => {
 
         // Başarı durumunda formu sıfırla
-        if (success && (formData.name || formData.email || formData.message)) {
-          setFormData({ name: '', email: '', message: '' });
-        }
+        useEffect(() => {
+          if (success) {
+            toast.success("Mesajınız başarıyla iletildi!")
+            setFormData({ name: '', email: '', message: '' });
+          }
+          if (error) {
+            toast.error("Bir hata oluştu, lütfen tekrar deneyin.")
+          }
+        }, [success, error]);
+
 
         return (
           <>
             <div className='grid grid-cols-1 gap-5 h-full w-full px-5 '>
               <Honeypot />
-              {success && <p>Thanks for contacting us!</p>}
-              {error && <p>Sorry, something went wrong.</p>}
-
               <div className='grid md:grid-cols-2 grid-cols-1 gap-3'>
                 <div>
                   <label htmlFor="name"></label>
