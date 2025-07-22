@@ -5,6 +5,7 @@ import { useState } from "react";
 import MobileMenu from "../MobileMenu";
 import { footerItems } from "../../data/footerData";
 import { menuItems } from "../../data/menu";
+import { Toaster } from "sonner";
 
 
 
@@ -17,6 +18,7 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen  w-full max-w-screen ">
+    <Toaster/>
       <MobileMenu menuItems={menuItems} isOpen={open} onClose={() => setOpen(false)} />
 
       <Header menuItems={menuItems} onToggleMenu={() => setOpen(true)} />
