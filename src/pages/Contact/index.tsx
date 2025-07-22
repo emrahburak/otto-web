@@ -20,7 +20,8 @@ export default function ContactPage() {
       <section className="w-full max-w-6xl mx-auto py-5">
         <h1 className="text-center font-semibold font-display text-3xl">İLETİŞİME GEÇİN</h1>
 
-        <div className="w-full grid grid-cols-3 gap-4 py-10 ">
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 py-16">
           <div className="flex flex-col items-center justify-start gap-5">
             <FontAwesomeIcon icon={faLocationDot} className="text-4xl text-orange-01" />
             <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Adres</p>
@@ -46,7 +47,9 @@ export default function ContactPage() {
 
           </div>
 
+
         </div>
+
 
       </section>
       <LocationField />
