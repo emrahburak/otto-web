@@ -20,6 +20,7 @@
     "path": "^0.12.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-netlify-forms": "^2.0.3",
     "react-router-dom": "^7.6.3",
     "swiper": "^11.2.10",
     "tailwindcss": "^4.1.11"

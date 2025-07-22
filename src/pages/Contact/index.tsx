@@ -3,6 +3,7 @@ import BreadCrumb from "../../components/BreadCrumb";
 import LocationField from "../../components/LocationField";
 import { ContactData } from "../../data/contact";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import ContactField from "../../components/ContactField";
 
 
 
@@ -49,8 +50,15 @@ export default function ContactPage() {
 
 
         </div>
+      </section>
+      <section className="w-full    bg-gray-01">
+        <div className="max-w-4xl mx-auto py-5 space-y-4">
 
+        <h1 className="text-center font-semibold font-display text-3xl mb-4">Bize Sorunuz Var mı?</h1>
 
+          <ContactField />
+
+        </div>
       </section>
       <LocationField />
     </div>
