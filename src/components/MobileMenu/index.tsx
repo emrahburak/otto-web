@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import type { headLink } from "../../types/headlink";
 import { Button } from "../../ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import ottoLogo from "@/assets/otto-logo.png"
+import type { headLink } from "../../types/types";
 
 
 interface MobileMenuProps {

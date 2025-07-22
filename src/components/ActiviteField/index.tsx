@@ -1,4 +1,4 @@
-import type { CardData } from "../../types/CardData";
+import type { CardData } from "../../types/types";
 import Card from "../../ui/Card";
 
 

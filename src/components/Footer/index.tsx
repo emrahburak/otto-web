@@ -1,95 +1,70 @@
 import { Link } from "react-router-dom";
 import ottoLogo from "@/assets/otto-logo-rbg.png"
+import ottoParkLogo from "@/assets/otto-doga-park.png"
+import type { FooterLinkGroup } from "../../types/types";
 
 
 
 
-const bottomImage:string = "https://themounty.ancorathemes.com/wp-content/uploads/2018/04/bg-footer.png?id=558"
+const bottomImage: string = "https://themounty.ancorathemes.com/wp-content/uploads/2018/04/bg-footer.png?id=558"
 
-interface FooterLink {
-  id: number;
-  name: string;
-  link: string;
-}
 
-interface FooterLinkGroup {
-  title: string;
-  links: FooterLink[];
+
+interface FooterProps {
+  footerItems: FooterLinkGroup[]
 }
 
 
-
-const footerLinkGroups: FooterLinkGroup[] = [
-  {
-    title: "Bilgi",
-    links: [
-      { id: 1, name: "Hakkımızda", link: "/about" },
-      { id: 2, name: "Kariyer", link: "/careers" },
-      { id: 3, name: "Blog", link: "/blog" },
-    ],
-  },
-  {
-    title: "Kampımız",
-    links: [
-      { id: 4, name: "Konaklama", link: "/accommodation" },
-      { id: 5, name: "Fiyatlandırma", link: "/pricing" },
-      { id: 6, name: "S.S.S.", link: "/faq" },
-    ],
-  },
-  {
-    title: "Rezervasyon",
-    links: [
-      { id: 7, name: "İletişim", link: "/contact" },
-      { id: 8, name: "Destek", link: "/support" },
-      { id: 9, name: "Gizlilik", link: "/privacy" },
-    ],
-  },
-  {
-    title: "Aktiviteler",
-    links: [
-      { id: 10, name: "Atölyeler", link: "/workshops" },
-      { id: 11, name: "Sporlar", link: "/sports" },
-      { id: 12, name: "Doğa Yürüyüşü", link: "/hiking" },
-    ],
-  },
-];
-
-
-export const Footer = () => {
+export const Footer = ({ footerItems }: FooterProps) => {
   return (
-    <footer className="relative w-full pt-20 min-w-screen">
-      <div className="w-full  flex items-center justify-center">
-        <div className="xl:w-3/4 w-1/2 mx-auto grid xl:grid-cols-5 grid-cols-2 gap-2">
-          {footerLinkGroups.slice(0, 2).map((group) => (
-            <div key={group.title} className="flex flex-col gap-2">
-              <h4 className="text-gray-900 font-display">{group.title}</h4>
-              {group.links.map((link) => (
-                <Link key={link.id} to={link.link} className="text-gray-600 hover:text-gray-900 font-display-02">
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          ))}
+    <footer className=" w-full lg:pt-20 sm:pt-10 min-w-screen">
 
-          {/* Orta Logo */}
-          <Link to="/" className="xl:flex items-center justify-center hidden">
-            <img src={ottoLogo} alt="Logo" className="w-auto" />
+      <div className="flex flex-nowrap items-center justify-center gap-5 lg:hidden mb-5">
+        <Link to="/" >
+          <img src={ottoLogo} alt="otto doğa okulu" className="object-cover w-24" />
+        </Link>
+        <a href="https://ottodogapark.com/" target="_blank">
+          <img src={ottoParkLogo} alt="otto doğa park" className="object-cover w-24 " />
+        </a>
+      </div>
+
+      <div className="grid lg:grid-cols-5 grid-cols-2 lg:max-w-6xl max-w-3xl mx-auto px-10 gap-5 lg:text-left text-center ">
+
+
+        {footerItems.slice(0, 2).map((group) => (
+          <div key={group.title} className="flex flex-col gap-2 ">
+            <h4 className="text-gray-900 font-display">{group.title}</h4>
+            {group.links.map((link) => (
+              <Link key={link.id} to={link.link} className="text-gray-600 hover:text-gray-900 font-display-02">
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        ))}
+
+        {/* Orta Logo */}
+        <div className="hidden lg:flex flex-col flex-nowrap items-center justify-evenly">
+
+          <Link to="/" >
+            <img src={ottoLogo} alt="otto doğa okulu" className="object-cover w-24" />
           </Link>
-
-          {footerLinkGroups.slice(2).map((group) => (
-            <div key={group.title} className="flex flex-col gap-2">
-              <h4 className="text-lg  text-gray-900 font-display ">{group.title}</h4>
-              {group.links.map((link) => (
-                <Link key={link.id} to={link.link} className="text-gray-600 hover:text-gray-900 font-display-02 ">
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          ))}
+          <a href="https://ottodogapark.com/" target="_blank">
+            <img src={ottoParkLogo} alt="otto doğa park" className="object-cover w-24 " />
+          </a>
         </div>
 
-
+        {footerItems.slice(2).map((group) => (
+          <div key={group.title} className="flex flex-col gap-2">
+            <h4 className="text-lg  text-gray-900 font-display ">{group.title}</h4>
+            {group.links.map((link: any) => (
+              <Link key={link.id} to={link.link} className="text-gray-600 hover:text-gray-900 font-display-02 ">
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        ))}
       </div>
+
 
 
       {/* Alt kısma arka plan görseli */}

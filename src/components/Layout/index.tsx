@@ -3,16 +3,14 @@ import { Footer } from "../Footer";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import MobileMenu from "../MobileMenu";
-import type { headLink } from "../../types/headlink";
+import { footerItems } from "../../data/footerData";
+import { menuItems } from "../../data/menu";
 
 
 
-const menuItems: headLink[] = [
-  { id: 1, name: 'ANASAYFA', link: '/' },
-  { id: 2, name: 'HAKKIMIZDA', link: '/about' },
-  { id: 3, name: 'AKTİVİTELER', link: '/activites' },
-  { id: 4, name: 'İLETİŞİM', link: '/contact' },
-]
+
+
+
 
 export default function Layout() {
   const [open, setOpen] = useState(false)
@@ -26,7 +24,7 @@ export default function Layout() {
       <main className="flex-grow">
         <Outlet />
       </main>
-      <Footer />
+      <Footer footerItems={footerItems} />
 
 
     </div>

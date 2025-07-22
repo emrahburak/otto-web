@@ -1,7 +1,7 @@
-import type { CardData } from "../../types/CardData"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import type { CardData } from "../../types/types";
 
 
 interface CardProps {
@@ -56,9 +56,9 @@ export default function Card({ items, variant }: CardProps) {
         <Link
           to="/"
           className={`
-      absolute left-1/2 translate-x-[-50%] bottom-3 p-2 rounded-full 
-      text-center w-fit h-fit z-10 text-green-01 hover:text-white text-xl 
-      transition-all duration-300 ease-in-out 
+      absolute left-1/2 translate-x-[-50%] bottom-3 p-2 rounded-full
+      text-center w-fit h-fit z-10 text-green-01 hover:text-white text-xl
+      transition-all duration-300 ease-in-out
       ${variant === "default" ? "bg-gray-01 hover:bg-green-01" : ""}
       ${variant === "activite" ? "bg-white hover:bg-green-01" : ""}
     `}
@@ -72,11 +72,11 @@ export default function Card({ items, variant }: CardProps) {
 
       {
         variant === "team" && (
-          <div className="absolute left-0 right-0 -bottom-8 p-6 text-center bg-white 
+          <div className="absolute left-0 right-0 -bottom-8 p-6 text-center bg-white
     transition-all duration-300 ease-in-out group-hover:bottom-0">
             <p className="font-display text-3xl">{user?.name}</p>
             <span className="font-display-02 text-gray-500">{user?.position}</span>
-            <div className="mt-2 flex justify-center gap-4 opacity-0 translate-y-4 
+            <div className="mt-2 flex justify-center gap-4 opacity-0 translate-y-4
       group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
               {user?.socialMedia?.map((social) => (
                 <a

@@ -1,4 +1,4 @@
-import type { socialLinks } from "../types/CardData";
+import type { socialLinks } from "../types/types";
 
 interface IContact {
   phone: string;

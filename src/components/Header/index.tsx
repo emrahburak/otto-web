@@ -5,13 +5,9 @@ import { faPhone, faAt, faBars } from "@fortawesome/free-solid-svg-icons";
 import ottoLogo from "@/assets/otto-logo.png"
 import { useEffect, useState } from "react";
 import { SocialButtons } from "../../ui/SocialButtons";
-import type { socialButton } from "../../types/SocialButtons";
 import { Button } from "../../ui/Button";
-import type { headLink } from "../../types/headlink";
 import { ContactData } from "../../data/contact";
-
-
-
+import type { headLink, socialButton } from "../../types/types";
 
 
 
@@ -29,7 +25,6 @@ interface HeaderProps {
   menuItems: headLink[]
 
 }
-
 
 
 export const Header = ({ onToggleMenu,menuItems }: HeaderProps) => {

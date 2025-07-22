@@ -7,9 +7,9 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Autoplay } from 'swiper/modules';
-import type { CardData } from '../../types/CardData';
 import Card from '../../ui/Card';
 import { Link } from 'react-router-dom';
+import type { CardData } from '../../types/types';
 
 
 interface CarouselProps {
