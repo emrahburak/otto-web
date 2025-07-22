@@ -51,10 +51,10 @@ export default function ContactPage() {
 
         </div>
       </section>
-      <section className="w-full    bg-gray-01">
-        <div className="max-w-4xl mx-auto py-5 space-y-4">
+      <section className="w-full  bg-gray-01  ">
+        <div className="max-w-4xl mx-auto py-20 ">
 
-        <h1 className="text-center font-semibold font-display text-3xl mb-4">Bize Sorunuz Var mı?</h1>
+          <h1 className="text-center font-semibold font-display text-3xl mb-4">Bize Sorunuz Var mı?</h1>
 
           <ContactField />
 
