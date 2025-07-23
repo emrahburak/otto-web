@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 import type { CardData } from "../../types/types";
 import CardImage from "../../components/CardImage";
+import { Slugify } from "../../components/Slugify";
 
 
 interface CardProps {
@@ -11,7 +11,7 @@ interface CardProps {
 }
 
 export default function Card({ items, variant }: CardProps) {
-  const { title, description,  user } = items;
+  const { title, description, user } = items;
 
 
   return (
@@ -26,7 +26,9 @@ export default function Card({ items, variant }: CardProps) {
   ${variant === "activite" ? "bg-gray-01" : ""}
 `}>
 
-        <CardImage items={items} variant={variant} />
+        <Slugify title={title}>
+          <CardImage items={items} variant={variant} />
+        </Slugify>
 
 
         <div className="grid grid-cols-1 gap-2">
@@ -45,18 +47,20 @@ export default function Card({ items, variant }: CardProps) {
       </div>
 
       {(variant === "default" || variant === "activite") && (
-        <Link
-          to="/"
-          className={`
+
+        <Slugify title={title}>
+          <span
+            className={`
       absolute left-1/2 translate-x-[-50%] bottom-3 p-2 rounded-full
       text-center w-fit h-fit z-10 text-green-01 hover:text-white text-xl
       transition-all duration-300 ease-in-out
       ${variant === "default" ? "bg-gray-01 hover:bg-green-01" : ""}
       ${variant === "activite" ? "bg-white hover:bg-green-01" : ""}
     `}
-        >
-          <FontAwesomeIcon icon={faLink} />
-        </Link>
+          >
+            <FontAwesomeIcon icon={faLink} />
+          </span>
+        </Slugify>
       )}
 
 
