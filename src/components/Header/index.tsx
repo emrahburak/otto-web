@@ -27,7 +27,7 @@ interface HeaderProps {
 }
 
 
-export const Header = ({ onToggleMenu,menuItems }: HeaderProps) => {
+export const Header = ({ onToggleMenu, menuItems }: HeaderProps) => {
 
   const location = useLocation()
   const [scrolled, setScrolled] = useState(false)
@@ -52,13 +52,15 @@ export const Header = ({ onToggleMenu,menuItems }: HeaderProps) => {
       <header className="sticky top-0 z-10 bg-white shadow transition-all duration-300  min-h-[6rem] w-full">
 
         <div className="absolute left-0 top-1/2 -translate-y-1/2  flex-row items-center gap-2 pl-5  xl:hidden " >
+          <Link to="/">
+            <img
+              src={ottoLogo}
+              alt="Logo"
+              className={`transition-all duration-300 mx-auto ${scrolled ? "max-h-[4em]" : "max-h-[7.5em]"
+                }`}
+            />
+          </Link>
 
-          <img
-            src={ottoLogo}
-            alt="Logo"
-            className={`transition-all duration-300 mx-auto ${scrolled ? "max-h-[4em]" : "max-h-[7.5em]"
-              }`}
-          />
         </div>
 
 
@@ -88,12 +90,14 @@ export const Header = ({ onToggleMenu,menuItems }: HeaderProps) => {
 
         <div className="xl:flex justify-center hidden ">
 
-          <img
-            src={ottoLogo}
-            alt="Logo"
-            className={`transition-all duration-300 mx-auto ${scrolled ? "max-h-[4em]" : "max-h-[7.5em]"
-              }`}
-          />
+          <Link to="/">
+            <img
+              src={ottoLogo}
+              alt="Logo"
+              className={`transition-all duration-300 mx-auto ${scrolled ? "max-h-[4em]" : "max-h-[7.5em]"
+                }`}
+            />
+          </Link>
         </div>
 
         <div className="absolute right-4 top-1/2 -translate-y-1/2  flex-row gap-4 pr-5 hidden md:flex ">

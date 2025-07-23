@@ -21,10 +21,10 @@ export const Footer = ({ footerItems }: FooterProps) => {
 
       <div className="flex flex-nowrap items-center justify-center gap-5 lg:hidden mb-5">
         <Link to="/" >
-          <img src={ottoLogo} alt="otto doğa okulu" className="object-cover w-24" />
+          <img src={ottoLogo} alt="otto doğa okulu" className="object-cover w-28" />
         </Link>
         <a href="https://ottodogapark.com/" target="_blank">
-          <img src={ottoParkLogo} alt="otto doğa park" className="object-cover w-24 " />
+          <img src={ottoParkLogo} alt="otto doğa park" className="object-cover w-20 " />
         </a>
       </div>
 
@@ -46,7 +46,7 @@ export const Footer = ({ footerItems }: FooterProps) => {
         <div className="hidden lg:flex flex-col flex-nowrap items-center justify-evenly">
 
           <Link to="/" >
-            <img src={ottoLogo} alt="otto doğa okulu" className="object-cover w-24" />
+            <img src={ottoLogo} alt="otto doğa okulu" className="object-cover w-28" />
           </Link>
           <a href="https://ottodogapark.com/" target="_blank">
             <img src={ottoParkLogo} alt="otto doğa park" className="object-cover w-24 " />

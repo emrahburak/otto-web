@@ -31,9 +31,9 @@ export default function ContactPage() {
         <h1 className="text-center font-semibold font-display text-3xl">İLETİŞİME GEÇİN</h1>
 
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 py-16">
 
-          <div className="flex flex-col items-center justify-start gap-5">
+          <div className="flex flex-col items-center justify-start gap-1">
             <a href={`tel:${contactData.phone}`} className="text-orange-01 text-4xl">
               <FontAwesomeIcon icon={faPhone} />
             </a>
@@ -43,7 +43,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center justify-start gap-5">
+          <div className="flex flex-col items-center justify-start gap-1">
             <FontAwesomeIcon icon={faEnvelope} className="text-4xl text-orange-01" />
             <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Mail</p>
             <p className="font-display-02 text-gray-500  text-lg text-center">
@@ -52,7 +52,7 @@ export default function ContactPage() {
 
           </div>
 
-          <div className="flex flex-col items-center justify-start gap-5">
+          <div className="flex flex-col items-center justify-start gap-1">
             <a href="#location-section" className="hover:text-orange-01 transition" onClick={scrollToLocation}>
               <FontAwesomeIcon icon={faLocationDot} className="text-4xl text-orange-01" />
             </a>

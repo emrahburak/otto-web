@@ -1,7 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
 import { NetlifyForm, Honeypot } from 'react-netlify-forms'
-import { Button } from '../../ui/Button';
 import { toast } from "sonner"
 
 interface FormRenderProps {
@@ -93,9 +92,9 @@ const ContactField = () => {
               </div>
 
               <div className='flex items-center justify-center w-full'>
-                <Button className='bg-green-01 rounded-full py-3 text-white font-display px-10 cursor-pointer text-lg'>
+                <span className='bg-green-01 rounded-full py-3 text-white font-display px-10 cursor-pointer text-lg'>
                   <button type="submit" className='w-full h-full'>GÖNDER</button>
-                </Button>
+                </span>
               </div>
             </div>
           </>
