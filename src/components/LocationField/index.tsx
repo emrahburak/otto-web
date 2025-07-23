@@ -1,13 +1,34 @@
 
-const LocationField = () => {
-  const location = {
-    lat: 41.002292,
-    lng: 29.367437,
-  };
+import React from "react";
 
-  const getMapLink = () => {
+interface LocationFieldProps {
+  mapUrl: string;
+}
+
+function extractCoordinates(url: string): { lat: number; lng: number } | null {
+  const googleMatch = url.match(/@([-.\d]+),([-.\d]+)/) || url.match(/q=([-.\d]+),([-.\d]+)/);
+  const appleMatch = url.match(/ll=([-.\d]+),([-.\d]+)/);
+
+  if (googleMatch) {
+    const [, lat, lng] = googleMatch;
+    return { lat: parseFloat(lat), lng: parseFloat(lng) };
+  }
+
+  if (appleMatch) {
+    const [, lat, lng] = appleMatch;
+    return { lat: parseFloat(lat), lng: parseFloat(lng) };
+  }
+
+  return null;
+}
+
+const LocationField: React.FC<LocationFieldProps> = ({ mapUrl }) => {
+  const location = extractCoordinates(mapUrl);
+
+  if (!location) return <div className="text-red-500">Konum alınamadı</div>;
+
+  const getPlatformMapLink = () => {
     const userAgent = navigator.userAgent || navigator.vendor || "";
-
     const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream;
     const isAndroid = /android/i.test(userAgent);
 
@@ -20,12 +41,12 @@ const LocationField = () => {
     }
   };
 
-  const mapLink = getMapLink();
+  const platformLink = getPlatformMapLink();
   const iframeSrc = `https://maps.google.com/maps?q=${location.lat},${location.lng}&z=15&output=embed`;
 
   return (
     <section className="w-full bg-gray-100 p-4 rounded-xl shadow-md" style={{ height: "470px" }}>
-      <a href={mapLink} target="_blank" rel="noopener noreferrer">
+      <a href={platformLink} target="_blank" rel="noopener noreferrer">
         <div
           className="rounded-lg overflow-hidden cursor-pointer border border-gray-300 hover:ring-2 hover:ring-blue-400 transition"
           style={{ height: "100%" }}

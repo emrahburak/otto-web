@@ -23,16 +23,11 @@ export default function ContactPage() {
 
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 py-16">
-          <div className="flex flex-col items-center justify-start gap-5">
-            <FontAwesomeIcon icon={faLocationDot} className="text-4xl text-orange-01" />
-            <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Adres</p>
-            <p className="font-display-02 text-gray-500  text-lg text-center">
-              {contactData.address}
-            </p>
-          </div>
 
           <div className="flex flex-col items-center justify-start gap-5">
-            <FontAwesomeIcon icon={faPhone} className="text-4xl text-orange-01 " />
+            <a href={`tel:${contactData.phone}`} className="text-orange-01 text-4xl">
+              <FontAwesomeIcon icon={faPhone} />
+            </a>
             <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Telefon</p>
             <p className="font-display-02 text-gray-500 hover:text-orange-01 text-lg text-center">
               {contactData.phone}
@@ -48,6 +43,15 @@ export default function ContactPage() {
 
           </div>
 
+          <div className="flex flex-col items-center justify-start gap-5">
+            <a href="#location-section" className="hover:text-orange-01 transition">
+              <FontAwesomeIcon icon={faLocationDot} className="text-4xl text-orange-01" />
+            </a>
+            <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Adres</p>
+            <p className="font-display-02 text-gray-500  text-lg text-center">
+              {contactData.address}
+            </p>
+          </div>
 
         </div>
       </section>
@@ -60,7 +64,9 @@ export default function ContactPage() {
 
         </div>
       </section>
-      <LocationField />
+      <div id="location-section" className="pt-4">
+        <LocationField mapUrl={ContactData.map} />
+      </div>
     </div>
   )
 }
