@@ -1,57 +1,60 @@
-import dramaLogo from "@/assets/otto-category-drama.png";
-import kuklaLogo from "@/assets/otto-category-kukla.png";
-import comlekLogo from "@/assets/otto-category-comlek.png";
-import ciftciLogo from "@/assets/otto-category-ciftci.png";
-import yazOkuluLogo from "@/assets/otto-category-yaz-okulu.png";
 import type { CardData } from "../types/types";
+import campingIcon from "@/assets/camping-logo-03.svg";
+import ridingIcon from "@/assets/horse-riding-logo-01.svg";
+import cookingIcon from "@/assets/cooking-logo-01.svg";
+import summerIcon from "@/assets/summer-logo-02.svg";
+import puppetIcon from "@/assets/puppet-logo-01.svg";
+import gardeningIcon from "@/assets/gardening-logo-01.svg";
+import potteryIcon from "@/assets/pottery-logo-03.svg";
+import dramaIcon from "@/assets/drama-logo-01.svg";
 
 export const workshops: CardData[] = [
   {
     id: 1,
     title: "Online Drama Eğitimi",
     description: "Hayal gücünü keşfet, rol yaparak ifade becerini geliştir.",
-    image: dramaLogo,
+    image: dramaIcon,
   },
   {
     id: 2,
     title: "Çömlek Atölyesi",
     description: "Toprakla şekil ver, ellerinle hayalini yoğur.",
-    image: comlekLogo,
+    image: potteryIcon,
   },
   {
     id: 3,
     title: "Çiftçi Çocuk Atölyesi",
     description: "Toprağa dokun, doğayla dost ol, üretmenin keyfini yaşa.",
-    image: ciftciLogo,
+    image: gardeningIcon,
   },
   {
     id: 4,
     title: "Kukla Atölyesi",
     description: "Kendi kuklanı yap, ona hayat ver ve sahneye taşı.",
-    image: kuklaLogo,
+    image: puppetIcon,
   },
   {
     id: 5,
     title: "Yaz Okulu",
     description: "Dolu dolu bir yaz: keşif, doğa, oyun ve yeni arkadaşlar.",
-    image: yazOkuluLogo,
+    image: summerIcon,
   },
   {
     id: 6,
     title: "Mutfak Atölyesi",
     description: "Minik aşçılar için eğlenceli ve sağlıklı tarifler.",
-    image: yazOkuluLogo,
+    image: cookingIcon,
   },
   {
     id: 7,
     title: "Binicilik Atölyesi",
     description: "Atlarla tanış, doğayla uyum içinde denge kur.",
-    image: yazOkuluLogo,
+    image: ridingIcon,
   },
   {
     id: 8,
     title: "Kamp ve Çadır Atölyesi",
     description: "Doğada kamp kur, ekip ol ve birlikte yaşamayı öğren.",
-    image: yazOkuluLogo,
+    image: campingIcon,
   },
 ];

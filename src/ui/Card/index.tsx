@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import type { CardData } from "../../types/types";
+import CardImage from "../../components/CardImage";
 
 
 interface CardProps {
@@ -10,7 +11,7 @@ interface CardProps {
 }
 
 export default function Card({ items, variant }: CardProps) {
-  const { title, description, image, user } = items;
+  const { title, description,  user } = items;
 
 
   return (
@@ -23,23 +24,11 @@ export default function Card({ items, variant }: CardProps) {
   ${variant === "default" || variant === "activite" ? "shadow-md p-7 flex flex-col gap-5 text-gray-02 w-full h-full" : ""}
   ${variant === "default" ? "bg-white" : ""}
   ${variant === "activite" ? "bg-gray-01" : ""}
-`}>        {image ? (
+`}>
 
-          <img
-            src={image}
-            alt={title}
-            className={
-              `${variant === "default" || variant === "activite" ? "w-40 h-40 object-cover  mx-auto" : ""}
-              ${variant === "team" ? "w-full object-cover  " : ""}`
-            }
-          />
-        ) : (
-          <div className={`
-          ${variant === "default" || variant === "activite" ? "w-full h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm" : ""}
-          `}>
-            Görsel yok
-          </div>
-        )}
+        <CardImage items={items} variant={variant} />
+
+
         <div className="grid grid-cols-1 gap-2">
           <h3 className={`${variant === "default" || variant === "activite" ? "text-lg font-semibold mb-2 text-center font-display text-black" : ""}
           `}>{title}</h3>
@@ -49,6 +38,9 @@ export default function Card({ items, variant }: CardProps) {
               {description}
             </p>
           )}
+
+
+
         </div>
       </div>
 

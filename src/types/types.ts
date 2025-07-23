@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import type React from "react";
 
 export interface socialButton {
@@ -29,6 +30,7 @@ export interface CardData {
   description?: string;
   image?: string;
   href?: string;
+  logo?: ComponentType;
 }
 
 export interface headLink {
