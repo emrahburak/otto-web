@@ -1,6 +1,11 @@
 import type { ComponentType } from "react";
 import type React from "react";
 
+export interface AboutContent {
+  id: string;
+  img: string;
+}
+
 export interface socialButton {
   id: number;
   name: string;
