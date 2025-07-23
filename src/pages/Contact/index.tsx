@@ -26,7 +26,7 @@ export default function ContactPage() {
           <div className="flex flex-col items-center justify-start gap-5">
             <FontAwesomeIcon icon={faLocationDot} className="text-4xl text-orange-01" />
             <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Adres</p>
-            <p className="font-display-02 text-gray-500  text-lg">
+            <p className="font-display-02 text-gray-500  text-lg text-center">
               {contactData.address}
             </p>
           </div>
@@ -34,7 +34,7 @@ export default function ContactPage() {
           <div className="flex flex-col items-center justify-start gap-5">
             <FontAwesomeIcon icon={faPhone} className="text-4xl text-orange-01 " />
             <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Telefon</p>
-            <p className="font-display-02 text-gray-500 hover:text-orange-01 text-lg">
+            <p className="font-display-02 text-gray-500 hover:text-orange-01 text-lg text-center">
               {contactData.phone}
             </p>
           </div>
@@ -42,7 +42,7 @@ export default function ContactPage() {
           <div className="flex flex-col items-center justify-start gap-5">
             <FontAwesomeIcon icon={faEnvelope} className="text-4xl text-orange-01" />
             <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Mail</p>
-            <p className="font-display-02 text-gray-500  text-lg">
+            <p className="font-display-02 text-gray-500  text-lg text-center">
               {contactData.mail}
             </p>
 
