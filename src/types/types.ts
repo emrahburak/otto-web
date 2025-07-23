@@ -1,4 +1,3 @@
-import type { ComponentType } from "react";
 import type React from "react";
 
 export interface AboutContent {
@@ -35,7 +34,7 @@ export interface CardData {
   description?: string;
   image?: string;
   href?: string;
-  logo?: ComponentType;
+  bannerImage?: string;
 }
 
 export interface headLink {

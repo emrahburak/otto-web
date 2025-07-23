@@ -53,7 +53,7 @@ const ContactField = () => {
                     }}
                     required
                     placeholder='Ad/Soyad'
-                    className='bg-white p-4 rounded-full w-full focus:outline-2 focus:outline-orange-01'
+                    className='bg-white py-4 px-6 rounded-full w-full focus:outline-2 focus:outline-orange-01'
                   />
                 </div>
 
@@ -70,7 +70,7 @@ const ContactField = () => {
                     }}
                     required
                     placeholder='Email'
-                    className='bg-white p-4 rounded-full w-full focus:outline-2 focus:outline-orange-01'
+                    className='bg-white py-4 px-6 rounded-full w-full focus:outline-2 focus:outline-orange-01'
                   />
                 </div>
               </div>
@@ -88,7 +88,7 @@ const ContactField = () => {
                   }}
                   required
                   placeholder='Mesaj'
-                  className='bg-white focus:outline-2 focus:outline-orange-01 p-4 rounded-4xl w-full'
+                  className='bg-white focus:outline-2 focus:outline-orange-01 py-4 px-6 rounded-4xl w-full overflow-y-auto'
                 />
               </div>
 
