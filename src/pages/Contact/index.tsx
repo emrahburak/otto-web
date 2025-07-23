@@ -10,6 +10,15 @@ import ContactField from "../../components/ContactField";
 export default function ContactPage() {
   const contactData = ContactData
 
+  const scrollToLocation = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const el = document.getElementById("location-section");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+
   return (
     <div>
       <BreadCrumb
@@ -44,7 +53,7 @@ export default function ContactPage() {
           </div>
 
           <div className="flex flex-col items-center justify-start gap-5">
-            <a href="#location-section" className="hover:text-orange-01 transition">
+            <a href="#location-section" className="hover:text-orange-01 transition" onClick={scrollToLocation}>
               <FontAwesomeIcon icon={faLocationDot} className="text-4xl text-orange-01" />
             </a>
             <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Adres</p>

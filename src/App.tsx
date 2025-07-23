@@ -11,7 +11,10 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter
+        // @ts-ignore
+        scrollRestoration="manual"
+      >
         <AppRoutes />
       </BrowserRouter>
     </>

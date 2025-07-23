@@ -12,7 +12,7 @@ export const footerItems: FooterLinkGroup[] = [
   {
     title: "Aktiviteler",
     links: [
-      { id: 4, name: "Tüm Aktiviteler", link: "/activities" },
+      { id: 4, name: "Tüm Aktiviteler", link: "/activites" },
       // tekil route'lar dinamik olacaksa burada yer verilmeyebilir
     ],
   },

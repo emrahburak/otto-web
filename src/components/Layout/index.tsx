@@ -6,6 +6,7 @@ import MobileMenu from "../MobileMenu";
 import { footerItems } from "../../data/footerData";
 import { menuItems } from "../../data/menu";
 import { Toaster } from "sonner";
+import { ScrollToTop } from "../ScrollToTop";
 
 
 
@@ -28,6 +29,7 @@ export default function Layout() {
       <MobileMenu menuItems={menuItems} isOpen={open} onClose={() => setOpen(false)} />
 
       <Header menuItems={menuItems} onToggleMenu={() => setOpen(true)} />
+      <ScrollToTop/>
 
       <main className="flex-grow">
         <Outlet />
