@@ -22,8 +22,8 @@ export default function Card({ items, variant }: CardProps) {
       `}>
       <div className={`
   ${variant === "default" || variant === "activite" ? "shadow-md p-7 flex flex-col gap-5 text-gray-02 w-full h-full" : ""}
-  ${variant === "default" ? "bg-white" : ""}
-  ${variant === "activite" ? "bg-gray-01" : ""}
+  ${variant === "default" ? "bg-white " : ""}
+  ${variant === "activite" ? "bg-gray-01 hover:shadow-xl transition-all duration-200 ease-in-out" : ""}
 `}>
 
         <Slugify title={title}>
