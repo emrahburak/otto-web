@@ -6,9 +6,6 @@ import type { FooterLinkGroup } from "../../types/types";
 
 
 
-const bottomImage: string = "https://themounty.ancorathemes.com/wp-content/uploads/2018/04/bg-footer.png?id=558"
-
-
 
 interface FooterProps {
   footerItems: FooterLinkGroup[]
@@ -17,7 +14,7 @@ interface FooterProps {
 
 export const Footer = ({ footerItems }: FooterProps) => {
   return (
-    <footer className=" w-full lg:pt-20 sm:pt-10 min-w-screen">
+    <footer className=" w-full lg:pt-20 sm:pt-10 min-w-screen space-y-10">
 
       <div className="flex flex-nowrap items-center justify-center gap-5 lg:hidden mb-5">
         <Link to="/" >
@@ -67,13 +64,24 @@ export const Footer = ({ footerItems }: FooterProps) => {
 
 
 
+      <section className="w-full max-w-6xl mx-auto flex items-center  justify-center">
+        <div className="text-sm text-gray-500">
+          <h2 className="font-semibold font-display text-center text-lg">Bize Ulaşın</h2>
+          <p className="font-semibold text-center font-display-02">OTTO DOĞA OKULU</p>
+          <p className="text-center font-display-02">Kurna Mah. Kurtdoğmuş Yolu Cad. No: 63/1 Pendik – İstanbul</p>
+        </div>
+
+
+      </section>
+
+
       {/* Alt kısma arka plan görseli */}
-      <div className="w-full">
-        <img
-          src={bottomImage}
-          alt="footer pattern"
-          className="w-full h-auto"
-        />
+      <div className="w-full min-h-[288px] bg-[url(@/assets/bg-footer.png)] bg-cover bg-center bg-no-repeat mt-5 flex items-center justify-center">
+
+        <div className="text-xs text-gray-400 mt-2">
+          © {new Date().getFullYear()} Bu site, ULUTAŞ SANAT AKADEMİ ve Prodüksiyon Hizmetleri tarafından hazırlanmıştır.
+        </div>
+
       </div>
 
 

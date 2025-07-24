@@ -6,6 +6,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import ActivitesPage from "../pages/Activites";
 import ServiceDetailPage from "../pages/SeviceDetail";
+import PageDetailPage from "../pages/PageDetail";
 
 export const appRoutes: RouteObject[] = [
   {
@@ -17,6 +18,7 @@ export const appRoutes: RouteObject[] = [
       { path: "contact", element: <Contact /> },
       { path: "activites", element: <ActivitesPage /> },
       { path: "services/:slug", element: <ServiceDetailPage /> },
+      { path: "page/:slug", element: <PageDetailPage /> },
 
     ],
   },
