@@ -7,6 +7,7 @@ import { footerItems } from "../../data/footerData";
 import { menuItems } from "../../data/menu";
 import { Toaster } from "sonner";
 import { ScrollToTop } from "../ScrollToTop";
+import ChatField from "../ChatField";
 
 
 
@@ -34,6 +35,7 @@ export default function Layout() {
       <main className="flex-grow">
         <Outlet />
       </main>
+      <ChatField/>
       <Footer footerItems={footerItems} />
 
 
