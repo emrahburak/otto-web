@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { ContactData } from "../../data/contact";
+
 
 
 export default function ChatField() {
@@ -11,7 +13,7 @@ export default function ChatField() {
       navigator.userAgent
     );
 
-    const phone = "+905057712390";
+    const phone = ContactData.phone90
     const base = isMobile
       ? `https://wa.me/${phone}`
       : `https://web.whatsapp.com/send?phone=${phone}`;
@@ -27,7 +29,9 @@ export default function ChatField() {
       className="fixed bottom-5 right-5 bg-[#25D366] text-white px-4 py-2 rounded-full font-semibold shadow-md flex items-center gap-2 hover:scale-105 transition-transform z-50"
     >
       <FontAwesomeIcon icon={faWhatsapp} />
-      WhatsApp
+      <span className="hidden sm:block">
+        WhatsApp
+      </span>
     </a>
   );
 }

@@ -70,11 +70,17 @@ export const Header = ({ onToggleMenu, menuItems }: HeaderProps) => {
 
 
           <div className="flex flex-row items-center justify-start gap-2 border-l-3 border-gray-200 pl-3 ">
+
             <div className="rounded-full px-1.5 py-0.5 border-2 border-orange-01">
-              <FontAwesomeIcon icon={faPhone} className="text-lg text-orange-01" />
+              <a href={`tel:${contactData.phone}`}>
+                <FontAwesomeIcon icon={faPhone} className="text-lg text-orange-01" />
+              </a>
             </div>
             <span className="text-sm font-semibold">
-              {contactData.phone}
+
+              <a href={`tel:${contactData.phone}`}>
+                {contactData.phone}
+              </a>
             </span>
           </div>
           <div className="flex flex-row items-center justify-start gap-2 border-l-3 border-gray-200 pl-3 ">

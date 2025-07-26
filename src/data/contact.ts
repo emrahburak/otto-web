@@ -2,6 +2,7 @@ import type { socialLinks } from "../types/types";
 
 interface IContact {
   phone: string;
+  phone90: number;
   mail: string;
   address?: string;
   social?: socialLinks[];
@@ -9,6 +10,7 @@ interface IContact {
 }
 
 export const ContactData: IContact = {
+  phone90: 905010144386,
   phone: "05010144386",
   mail: "info@ottodogapark.com",
   address: "Kurna, Kurtdoğmuş Yolu Cd.No:65 34916 Pendik/İstanbul",
