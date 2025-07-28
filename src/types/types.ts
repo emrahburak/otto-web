@@ -35,6 +35,7 @@ export interface CardData {
   image?: string;
   href?: string;
   bannerImage?: string;
+  content?: string;
 }
 
 export interface headLink {
