@@ -9,7 +9,7 @@ const images = import.meta.glob("@/assets/images/drama/*.{png,jpg,jpeg,svg}", {
 
 export const dramaAtolyesi: CardData = {
   id: 11,
-  title: "Online Drama Eğitimi",
+  title: "Drama Eğitimi",
   description: "Hayal gücünü keşfet, rol yaparak ifade becerini geliştir.",
   logo: dramaIcon,
   images: Object.values(images) as string[],

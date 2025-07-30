@@ -3,19 +3,35 @@ import BreadCrumb from "../../components/BreadCrumb";
 import LocationField from "../../components/LocationField";
 import { ContactData } from "../../data/contact";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { extractCoordinates, getPlatformMapLink } from "../../lib/mapUtil";
+import { Button } from "../../ui/Button";
 
 
 
 export default function ContactPage() {
   const contactData = ContactData
 
-  const scrollToLocation = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const el = document.getElementById("location-section");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  const mapUrl = contactData.map
+  const location = extractCoordinates(mapUrl)
+
+
+
+  const handleClick = () => {
+    if (!location) return;
+    const link = getPlatformMapLink(location.lat, location.lng)
+
+    window.open(link, "_blank")
+  }
+
+
+
+  // const scrollToLocation = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //   e.preventDefault();
+  //   const el = document.getElementById("location-section");
+  //   if (el) {
+  //     el.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   }
+  // };
 
 
   return (
@@ -52,10 +68,11 @@ export default function ContactPage() {
           </div>
 
           <div className="flex flex-col items-center justify-start gap-1">
-            <a href="#location-section" className="hover:text-orange-01 transition" onClick={scrollToLocation}>
+            <Button className="hover:text-orange-01 transition cursor-pointer" onClick={handleClick}>
               <FontAwesomeIcon icon={faLocationDot} className="text-4xl text-orange-01" />
-            </a>
-            <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Adres</p>
+              <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Adres</p>
+
+            </Button>
             <p className="font-display-02 text-gray-500  text-lg text-center">
               {contactData.address}
             </p>
@@ -63,14 +80,6 @@ export default function ContactPage() {
 
         </div>
       </section>
-      {/* <section className="w-full  bg-gray-01  "> */}
-      {/*   <div className="max-w-4xl mx-auto py-20 "> */}
-      {/**/}
-      {/*     <h1 className="text-center font-semibold font-display text-3xl mb-4">Bize Sorunuz Var mı?</h1> */}
-      {/**/}
-      {/**/}
-      {/*   </div> */}
-      {/* </section> */}
       <div id="location-section" className="pt-4">
         <LocationField mapUrl={ContactData.map} />
       </div>
