@@ -67,7 +67,7 @@ export const Footer = ({ footerItems }: FooterProps) => {
       <section className="w-full max-w-6xl mx-auto flex items-center  justify-center">
         <div className="text-sm text-gray-500">
           <h2 className="font-semibold font-display text-center text-lg">Bize Ulaşın</h2>
-          <p className="font-semibold text-center font-display-02">OTTO DOĞA PARK/OTTO DOĞA OKULU</p>
+          <p className="font-semibold text-center font-display-02">OTTO DOĞA PARK / OTTO DOĞA OKULU</p>
           <p className="text-center font-display-02">Kurna Mah. Kurtdoğmuş Yolu Cad. No: 63/1 Pendik – İstanbul</p>
         </div>
 
@@ -77,10 +77,12 @@ export const Footer = ({ footerItems }: FooterProps) => {
 
       {/* Alt kısma arka plan görseli */}
 
-      <div className="text-xs text-gray-400 mt-2 text-center">
+      <div className="text-xs text-gray-600 mt-2 text-center">
         © {new Date().getFullYear()} Otto Doğa Okulu,
-        <a href="https://ottodogapark.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 underline  hover:text-black mx-1">
-          OTTO DOĞA PARK
+        <a href="https://ottodogapark.com" target="_blank" rel="noopener noreferrer" className=" underline  hover:text-black mx-1">
+          <strong>
+            OTTO DOĞA PARK
+          </strong>
         </a>
         alanı içerisinde faaliyet göstermekte olup, içeriği <strong>ULUTAŞ SANAT AKADEMİ</strong> ve Prodüksiyon Hizmetleri tarafından hazırlanmıştır.
       </div>
