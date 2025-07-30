@@ -7,7 +7,7 @@ export const slides: SlideContent[] = [
   {
     id: "slide-1",
     img: ottoSlide1,
-    banner: "Doğanın Kalbinde Uyan",
+    banner: "",
     description: "Günün ilk ışıkları, ormanın derinliklerinde hayat bulur.",
   },
   {

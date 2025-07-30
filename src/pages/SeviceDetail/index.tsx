@@ -43,7 +43,7 @@ export default function ServiceDetailPage() {
 
         <div className="w-full">
           {service.images && service.images.length > 0 ? (
-            <div ref={galleryRef} className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div ref={galleryRef} className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {service.images.map((img, idx) => (
                 <a
                   key={idx}

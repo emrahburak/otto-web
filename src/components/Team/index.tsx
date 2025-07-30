@@ -12,10 +12,17 @@ export default function Team({ members }: TeamProps) {
       <div className="w-full bg-gray-01 py-16 space-y-8 ">
 
         <h1 className='font-display text-center font-normal text-4xl'>Ekibimizle Tanışın</h1>
-        <div className="flex justify-center gap-6 flex-wrap">
-          {members.map(member => (
-            <Card key={member.id} items={member} variant="team" />
-          ))}
+        <div className=" mx-auto w-full max-w-6xl ">
+          <div className="flex items-center justify-center w-full">
+            <Card items={members[0]} variant="team" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2">
+            {members.slice(1).map(member => (
+              <div key={member.id} className="flex items-center justify-center">
+                <Card items={member} variant="team" />
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

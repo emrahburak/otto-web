@@ -12,8 +12,11 @@ import { dramaAtolyesi } from "./contents/aktivite/drama";
 import { yazOkulu } from "./contents/aktivite/yaz-okulu";
 import { cocukOyunu } from "./contents/aktivite/cocuk-oyunu";
 import { okulGezisi } from "./contents/aktivite/okul-gezisi";
+import { ebruAtolyesi } from "./contents/aktivite/ebru";
 
 export const workshops: CardData[] = [
+  okulGezisi,
+  yazOkulu,
   binicilikAtolyesi,
   ciftciCocukAtolyesi,
   comlekAtolyesi,
@@ -24,7 +27,6 @@ export const workshops: CardData[] = [
   futbolVoleybolAtis,
   ziplineSurvivorParkuru,
   dramaAtolyesi,
-  yazOkulu,
+  ebruAtolyesi,
   cocukOyunu,
-  okulGezisi,
 ];

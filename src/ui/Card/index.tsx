@@ -18,7 +18,7 @@ export default function Card({ items, variant }: CardProps) {
     <div className={`
       group 
           ${variant === "default" || variant === "activite" ? " relative pb-6 cursor-grab h-full w-full" : ""}
-          ${variant === "team" ? "w-[400px] h-[400px] relative overflow-hidden cursor-pointer" : ""}
+          ${variant === "team" ? "w-[340px] h-[360px] relative overflow-hidden cursor-pointer" : ""}
       `}>
       <div className={`
   ${variant === "default" || variant === "activite" ? "shadow-md p-7 flex flex-col gap-5 text-gray-02 w-full h-full" : ""}
@@ -26,7 +26,7 @@ export default function Card({ items, variant }: CardProps) {
   ${variant === "activite" ? "bg-gray-01 hover:shadow-xl transition-all duration-200 ease-in-out" : ""}
 `}>
 
-        <Slugify title={title}>
+        <Slugify title={title} disable={variant === "team"}>
           <CardImage items={items} variant={variant} />
         </Slugify>
 
