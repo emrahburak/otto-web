@@ -1,7 +1,4 @@
-interface IAboutContent {
-  title: string;
-  content: string;
-}
+import type { IAboutContent } from "../types/types";
 
 export const aboutContent: IAboutContent = {
   title: "Otto Doğa Okulu",

@@ -1,5 +1,15 @@
 import type React from "react";
 
+export interface IAboutContent {
+  title: string;
+  content: string;
+}
+export interface SlideContent {
+  id: string;
+  img: string;
+  banner?: string;
+  description?: string;
+}
 export interface AboutContent {
   id: string;
   img: string;
