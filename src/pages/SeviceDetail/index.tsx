@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import slugify from "slugify";
 import { workshops } from "../../data/workshop";
 import BreadCrumb from "../../components/BreadCrumb";
-// import CardImage from "../../components/CardImage";
 
 import { useEffect, useRef } from "react";
 import { Fancybox as NativeFancybox } from "@fancyapps/ui/dist/fancybox/";
@@ -20,13 +19,11 @@ export default function ServiceDetailPage() {
   const galleryRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (galleryRef.current) {
-      NativeFancybox.bind(galleryRef.current, "[data-fancybox]");
-      return () => {
-        NativeFancybox.unbind(galleryRef.current);
-      };
-    }
-  }, [service?.images]);
+    NativeFancybox.bind("[data-fancybox]");
+    return () => {
+      NativeFancybox.unbind("[data-fancybox]");
+    };
+  }, [service?.images?.length]);
 
   if (!service) {
     return <div>Etkinlik bulunamadı.</div>;
