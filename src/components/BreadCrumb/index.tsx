@@ -15,7 +15,7 @@ export default function BreadCrumb({ items }: BreadCrumbProps) {
         <div >
           <div>
             <h1 className="text-3xl text-white font-bold font-display text-center ">
-              {items[items.length - 1]?.label.toUpperCase().replace("I", "İ")}
+              {items[items.length - 1]?.label.toLocaleUpperCase("tr")}
             </h1>
 
           </div>
@@ -28,10 +28,12 @@ export default function BreadCrumb({ items }: BreadCrumbProps) {
                 <li key={index} className="flex items-center text-white font-display ">
                   {!isLast && item.href ? (
                     <a href={item.href} className="hover:text-black transition-all duration-300 ease-in-out">
-                      {item.label.toUpperCase()}
+                      {item.label.toLocaleUpperCase("tr")}
+
                     </a>
                   ) : (
-                    <span className="">{item.label.toUpperCase()}</span>
+                    <span className="">{item.label.toLocaleUpperCase("tr")}</span>
+
                   )}
                   {!isLast && <span className="mx-2">~</span>}
                 </li>

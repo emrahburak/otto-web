@@ -19,7 +19,7 @@ export default function CardImage({ items, variant }: CardProps) {
   }
 
   // Burada default ise logo render et, değilse image
-  const imgSrc = variant === "default" ? logo : image;
+  const imgSrc = variant === "default" || variant === "activite" ? logo : image;
 
   return (
     <>

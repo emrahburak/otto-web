@@ -16,6 +16,22 @@ export function getContentsRecursiveForAktivite(): CardData[] {
     },
   );
 
+  const logos = import.meta.glob(
+    "/src/data/contents/aktivite/**/logo/*.{svg,png}",
+    {
+      eager: true,
+      import: "default",
+    },
+  );
+
+  const logosByFolder: Record<string, string> = {};
+  for (const [path, url] of Object.entries(logos)) {
+    const parts = path.split("/");
+    const aktiviteIndex = parts.indexOf("aktivite");
+    const folderName = parts[aktiviteIndex + 1];
+    logosByFolder[folderName] = url as string;
+  }
+
   const imagesByFolder: Record<string, string[]> = {};
 
   for (const [path, url] of Object.entries(images)) {
@@ -46,8 +62,9 @@ export function getContentsRecursiveForAktivite(): CardData[] {
         ...restAttributes,
         content: parsed.body,
         logo:
-          restAttributes.logo ||
-          `/src/data/contents/${folderName}/logo/logo.svg`,
+          restAttributes.logo && restAttributes.logo.startsWith("./logo/")
+            ? `/src/data/contents/aktivite/${folderName}/${restAttributes.logo.replace("./", "")}`
+            : logosByFolder[folderName] || "",
         images: imagesByFolder[folderName] || [],
       };
     },
