@@ -10,7 +10,7 @@ type BreadCrumbProps = {
 export default function BreadCrumb({ items }: BreadCrumbProps) {
   return (
     <>
-      <nav aria-label="breadcrumb" className="w-full min-h-[288px] bg-[url(@/assets/bg-heading.png)] bg-cover bg-center bg-no-repeat mt-5 flex items-center justify-center">
+      <nav aria-label="breadcrumb" className="w-full min-h-[288px] bg-[url(@/assets/ui/bg-heading.png)] bg-cover bg-center bg-no-repeat mt-5 flex items-center justify-center">
 
         <div >
           <div>

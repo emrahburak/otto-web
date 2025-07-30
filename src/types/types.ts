@@ -32,10 +32,12 @@ export interface CardData {
   user?: User;
   position?: string;
   description?: string;
-  image?: string;
+  logo?: string; // Eskiden image'ti
   href?: string;
+  images?: string[]; // Eskiden bannerImage'ti, şimdi liste
+  image?: string;
+  content?: string; // Markdown body içeriği (HTML olabilir)
   bannerImage?: string;
-  content?: string;
 }
 
 export interface headLink {

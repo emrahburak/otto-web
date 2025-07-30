@@ -6,25 +6,24 @@ interface CardProps {
 }
 
 export default function CardImage({ items, variant }: CardProps) {
-  const { title, image, bannerImage } = items
+  const { title, image, bannerImage, logo } = items;
 
   if (variant === "banner") {
     return bannerImage ? (
-      <img
-        src={bannerImage}
-        alt={title}
-        className="w-full h-auto object-cover"
-      />
+      <img src={bannerImage} alt={title} className="w-full h-auto object-cover" />
     ) : (
       <div className="w-full h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm">
         Görsel yok
       </div>
-    )
+    );
   }
+
+  // Burada default ise logo render et, değilse image
+  const imgSrc = variant === "default" ? logo : image;
 
   return (
     <>
-      {image ? (
+      {imgSrc ? (
         <div
           className={`
             ${variant === "default" || variant === "activite"
@@ -33,7 +32,7 @@ export default function CardImage({ items, variant }: CardProps) {
           `}
         >
           <img
-            src={image}
+            src={imgSrc}
             alt={title}
             className={`
               ${variant === "default" || variant === "activite" ? "w-12 h-12 object-contain filter invert brightness-0" : ""}
@@ -51,5 +50,6 @@ export default function CardImage({ items, variant }: CardProps) {
         </div>
       )}
     </>
-  )
+  );
 }
+

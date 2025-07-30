@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ottoLogo from "@/assets/otto-logo-rbg.png"
+import ottoLogo from "@/assets/otto-logo.png"
 import ottoParkLogo from "@/assets/otto-doga-park.png"
 import type { FooterLinkGroup } from "../../types/types";
 
@@ -14,7 +14,7 @@ interface FooterProps {
 
 export const Footer = ({ footerItems }: FooterProps) => {
   return (
-    <footer className=" w-full lg:pt-20 sm:pt-10 min-w-screen space-y-10">
+    <footer className=" w-full lg:pt-20 sm:pt-10 min-w-screen space-y-10 py-10">
 
       <div className="flex flex-nowrap items-center justify-center gap-5 lg:hidden mb-5">
         <Link to="/" >
@@ -67,7 +67,7 @@ export const Footer = ({ footerItems }: FooterProps) => {
       <section className="w-full max-w-6xl mx-auto flex items-center  justify-center">
         <div className="text-sm text-gray-500">
           <h2 className="font-semibold font-display text-center text-lg">Bize Ulaşın</h2>
-          <p className="font-semibold text-center font-display-02">OTTO DOĞAPARK/OTTO DOĞA OKULU</p>
+          <p className="font-semibold text-center font-display-02">OTTO DOĞA PARK/OTTO DOĞA OKULU</p>
           <p className="text-center font-display-02">Kurna Mah. Kurtdoğmuş Yolu Cad. No: 63/1 Pendik – İstanbul</p>
         </div>
 

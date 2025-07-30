@@ -1,12 +1,12 @@
 import type { CardData } from "../types/types";
-import campingIcon from "@/assets/camping-logo-03.svg";
-import ridingIcon from "@/assets/horse-riding-logo-01.svg";
-import cookingIcon from "@/assets/cooking-logo-01.svg";
-import summerIcon from "@/assets/summer-logo-02.svg";
-import puppetIcon from "@/assets/puppet-logo-01.svg";
-import gardeningIcon from "@/assets/gardening-logo-01.svg";
-import potteryIcon from "@/assets/pottery-logo-03.svg";
-import dramaIcon from "@/assets/drama-logo-01.svg";
+import campingIcon from "@/assets/icons/camping-logo-03.svg";
+import ridingIcon from "@/assets/icons/horse-riding-logo-01.svg";
+import cookingIcon from "@/assets/icons/cooking-logo-01.svg";
+import summerIcon from "@/assets/icons/summer-logo-02.svg";
+import puppetIcon from "@/assets/icons/puppet-logo-01.svg";
+import gardeningIcon from "@/assets/icons/gardening-logo-01.svg";
+import potteryIcon from "@/assets/icons/pottery-logo-03.svg";
+import dramaIcon from "@/assets/icons/drama-logo-01.svg";
 
 export const workshops: CardData[] = [
   {
