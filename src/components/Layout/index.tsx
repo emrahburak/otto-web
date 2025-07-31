@@ -8,7 +8,7 @@ import { menuItems } from "../../data/menu";
 import { Toaster } from "sonner";
 import { ScrollToTop } from "../ScrollToTop";
 import ChatField from "../ChatField";
-
+import { Analytics } from "@vercel/analytics/next"
 
 
 
@@ -30,14 +30,14 @@ export default function Layout() {
       <MobileMenu menuItems={menuItems} isOpen={open} onClose={() => setOpen(false)} />
 
       <Header menuItems={menuItems} onToggleMenu={() => setOpen(true)} />
-      <ScrollToTop/>
+      <ScrollToTop />
 
       <main className="flex-grow">
         <Outlet />
       </main>
-      <ChatField/>
+      <ChatField />
       <Footer footerItems={footerItems} />
-
+      <Analytics />
 
     </div>
   )
