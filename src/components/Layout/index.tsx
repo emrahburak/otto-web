@@ -8,7 +8,6 @@ import { menuItems } from "../../data/menu";
 import { Toaster } from "sonner";
 import { ScrollToTop } from "../ScrollToTop";
 import ChatField from "../ChatField";
-import { Analytics } from "@vercel/analytics/next"
 
 
 
@@ -37,7 +36,6 @@ export default function Layout() {
       </main>
       <ChatField />
       <Footer footerItems={footerItems} />
-      <Analytics />
 
     </div>
   )
