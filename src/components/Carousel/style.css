@@ -1,0 +1,13 @@
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  background-color: #f97316; /* bg-orange-500 */
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+}
+
+.custom-swiper .swiper-button-next::after,
+.custom-swiper .swiper-button-prev::after {
+  font-size: 16px;
+}

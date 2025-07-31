@@ -8,10 +8,11 @@ const allFooterLinks = footerItems.flatMap(group => group.links);
 export default function PageDetailPage() {
   const { slug } = useParams<{ slug: string }>();
 
+
   const page = allFooterLinks.find(link => {
-    const linkSlug = slugify(link.name ?? "", { lower: true, locale: "tr" });
-    return linkSlug === slug;
+    return (link.slug || slugify(link.name ?? "", { lower: true, locale: "tr" })) === slug;
   });
+
 
   if (!page) {
     return <div>Sayfa bulunamadı.</div>;

@@ -62,6 +62,7 @@ export interface FooterLink {
   id: number;
   name: string;
   link: string;
+  slug?: string;
 }
 
 export interface FooterLinkGroup {

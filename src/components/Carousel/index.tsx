@@ -1,12 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import "./style.css"
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
+import 'swiper/css/navigation';
 
 // import required modules
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import Card from '../../ui/Card';
 import { Link } from 'react-router-dom';
 import type { CardData } from '../../types/types';
@@ -24,6 +24,7 @@ export default function Carousel({ cards }: CarouselProps) {
         <h1 className='font-display text-center font-normal text-4xl'>ETKİNLİKLER</h1>
 
         <Swiper
+          navigation
           loop={true}
           pagination={{ clickable: true }}
           breakpoints={{
@@ -45,8 +46,8 @@ export default function Carousel({ cards }: CarouselProps) {
               spaceBetween: 40,
             },
           }} autoplay={{ delay: 3500, disableOnInteraction: false }}
-          modules={[Autoplay]}
-          className="w-full overflow-hidden mx-auto max-w-full sm:max-w-xl md:max-w-4xl lg:max-w-6xl"
+          modules={[Autoplay, Navigation]}
+          className="w-full  mx-auto max-w-full sm:max-w-xl md:max-w-4xl lg:max-w-6xl custom-swiper "
         >
 
           {cards.map((card, idx) => (

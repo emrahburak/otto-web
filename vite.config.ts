@@ -14,4 +14,19 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1000, // opsiyonel: sadece uyarıyı bastırır
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("@fortawesome")) return "vendor_fortawesome";
+            if (id.includes("swiper")) return "vendor_swiper";
+            if (id.includes("lucide-react")) return "vendor_lucide";
+            return "vendor";
+          }
+        },
+      },
+    },
+  },
 });

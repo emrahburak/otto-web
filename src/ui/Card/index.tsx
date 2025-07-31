@@ -3,15 +3,15 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import type { CardData } from "../../types/types";
 import CardImage from "../../components/CardImage";
 import { Slugify } from "../../components/Slugify";
-// import { faXTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faXTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 
-// const socialIcon = {
-//   facebook: { id: 1, name: "facebook", icon: <FontAwesomeIcon icon={faFacebook} className="text-lg" />, style: { backgroundColor: "#f2682a" } },
-//   x: { id: 2, name: "x", icon: <FontAwesomeIcon icon={faXTwitter} className="text-lg" />, style: { backgroundColor: "#5b9a42" } },
-//   instagram: { id: 3, name: "instagram", icon: <FontAwesomeIcon icon={faInstagram} className="text-lg" />, style: { backgroundColor: "#efc429" } }
-//
-// }
+const socialIcon = {
+  facebook: { id: 1, name: "facebook", icon: <FontAwesomeIcon icon={faFacebook} className="text-lg" />, style: { backgroundColor: "#f2682a" } },
+  x: { id: 2, name: "x", icon: <FontAwesomeIcon icon={faXTwitter} className="text-lg" />, style: { backgroundColor: "#5b9a42" } },
+  instagram: { id: 3, name: "instagram", icon: <FontAwesomeIcon icon={faInstagram} className="text-lg" />, style: { backgroundColor: "#efc429" } }
+
+}
 
 interface CardProps {
   items: CardData
@@ -92,17 +92,29 @@ export default function Card({ items, variant }: CardProps) {
             <span className="font-display-02 text-gray-500">{user?.position}</span>
             <div className="mt-2 flex justify-center gap-4 opacity-0 translate-y-4
       group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-              {user?.socialMedia?.map((social) => (
-                <a
-                  key={social.id}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className=" rounded-3xl flex items-center justify-center  text-sm "
-                >
-                  {social.title}
-                </a>
-              ))}
+              {user?.socialMedia?.map((social) => {
+                const key = social.title.toLowerCase() as keyof typeof socialIcon;
+                const iconData = socialIcon[key];
+
+                return (
+                  <div
+                    key={social.id}
+                    className="w-12 h-12 rounded-3xl flex items-center justify-center text-white text-xl"
+                    style={iconData?.style}
+                  >
+                    {social.href ? (
+                      <a
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full h-full flex items-center justify-center"
+                      >
+                        {iconData?.icon}
+                      </a>
+                    ) : null}
+                  </div>
+                );
+              })}
             </div>
           </div>
         )

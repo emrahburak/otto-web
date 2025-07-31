@@ -18,9 +18,8 @@ interface SlideProps {
 export default function Slide({ slides }: SlideProps) {
   return (
     <Swiper  autoplay={{ delay: 3500, disableOnInteraction: false }}
-
       loop={true}
-      modules={[ Autoplay]} className="mySwiper w-full h-[600px]">
+      modules={[ Autoplay]} className="mySwiper w-full h-[600px] ">
       {slides.map((slide) => (
         <SwiperSlide key={slide.id}>
           <div className="relative w-full h-full cursor-grab">

@@ -3,7 +3,7 @@ import type { FooterLinkGroup } from "../types/types";
 export const footerItems: FooterLinkGroup[] = [
   {
     title: "Kampımız",
-    links: [{ id: 3, name: "S.S.S.", link: "/faq" }],
+    links: [{ id: 3, name: "S.S.S.", link: "/page/faq", slug: "faq" }],
   },
   {
     title: "Aktiviteler",
