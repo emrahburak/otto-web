@@ -1,9 +1,9 @@
 import type { CardData } from "../types/types";
-import t1 from "@/assets/team/team-03.jpeg";
-import t2 from "@/assets/team/team-05.jpeg";
-import t3 from "@/assets/team/team-01.jpeg";
-import t4 from "@/assets/team/team-02.jpeg";
-import t5 from "@/assets/team/team-04.jpeg";
+import t1 from "@/assets/team/team-01.jpeg";
+import t2 from "@/assets/team/team-02.jpeg";
+import t3 from "@/assets/team/team-03.jpeg";
+import t4 from "@/assets/team/team-04.jpeg";
+import t5 from "@/assets/team/team-05.jpeg";
 
 export const teamMembers: CardData[] = [
   {

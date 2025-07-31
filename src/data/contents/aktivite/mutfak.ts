@@ -1,10 +1,13 @@
 import cookingIcon from "@/assets/icons/cooking-logo-01.svg";
 import type { CardData } from "../../../types/types";
 
-const images = import.meta.glob("@/assets/images/mutfak/*.{png,jpg,jpeg,svg}", {
-  eager: true,
-  import: "default",
-});
+const images = import.meta.glob(
+  "@/assets/images/mutfak/*.{png,jpg,jpeg,svg,JPG}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
 
 export const mutfakAtolyesi: CardData = {
   id: 6, // uygun ID ver

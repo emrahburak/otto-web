@@ -3,7 +3,7 @@ import ridingIcon from "@/assets/icons/horse-riding-logo-01.svg";
 import type { CardData } from "../../../types/types";
 
 const images = import.meta.glob(
-  "@/assets/images/binicilik/*.{png,jpg,jpeg,svg}",
+  `@/assets/images/binicilik/*.{png,jpg,jpeg,svg,JPG}`,
   {
     eager: true,
     import: "default",

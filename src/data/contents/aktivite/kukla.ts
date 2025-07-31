@@ -1,10 +1,13 @@
 import puppetIcon from "@/assets/icons/puppet-logo-01.svg";
 import type { CardData } from "../../../types/types";
 
-const images = import.meta.glob("@/assets/images/kukla/*.{png,jpg,jpeg,svg}", {
-  eager: true,
-  import: "default",
-});
+const images = import.meta.glob(
+  "@/assets/images/kukla/*.{png,jpg,jpeg,svg,JPG}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
 
 export const kuklaAtolyesi: CardData = {
   id: 5, // uygun ID ver

@@ -1,8 +1,8 @@
 import type { CardData } from "../../../types/types";
-
 import futbolIcon from "@/assets/icons/futbol-logo.svg";
+
 const images = import.meta.glob(
-  "@/assets/images/spor-atis/*.{png,jpg,jpeg,svg}",
+  "@/assets/images/spor-atis/*.{png,jpg,jpeg,svg,JPG}",
   {
     eager: true,
     import: "default",

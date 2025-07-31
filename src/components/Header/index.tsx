@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faPhone, faAt, faBars } from "@fortawesome/free-solid-svg-icons";
-import ottoLogo from "@/assets/otto-logo.png"
+import ottoLogo from "@/assets/logo/otto-doga-logo.png"
 import { useEffect, useState } from "react";
 import { SocialButtons } from "../../ui/SocialButtons";
 import { Button } from "../../ui/Button";

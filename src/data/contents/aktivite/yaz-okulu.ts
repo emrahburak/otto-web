@@ -3,7 +3,7 @@ import type { CardData } from "../../../types/types";
 import summerIcon from "@/assets/icons/summer-logo-02.svg";
 
 const images = import.meta.glob(
-  "@/assets/images/yaz-okulu/*.{png,jpg,jpeg,svg}",
+  "@/assets/images/yaz-okulu/*.{png,jpg,jpeg,svg,JPG}",
   {
     eager: true,
     import: "default",

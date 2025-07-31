@@ -3,7 +3,7 @@ import type { CardData } from "../../../types/types";
 import ziplineLogo from "@/assets/icons/zipline-logo-01.svg";
 
 const images = import.meta.glob(
-  "@/assets/images/zipline-survivor/*.{png,jpg,jpeg,svg}",
+  "@/assets/images/zipline-survivor/*.{png,jpg,jpeg,svg,JPG}",
   {
     eager: true,
     import: "default",

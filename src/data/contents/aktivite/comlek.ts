@@ -1,10 +1,13 @@
 import potteryIcon from "@/assets/icons/pottery-logo-03.svg";
 import type { CardData } from "../../../types/types";
 
-const images = import.meta.glob("@/assets/images/comlek/*.{png,jpg,jpeg,svg}", {
-  eager: true,
-  import: "default",
-});
+const images = import.meta.glob(
+  "@/assets/images/comlek/*.{png,jpg,jpeg,svg,JPG}",
+  {
+    eager: true,
+    import: "default",
+  },
+);
 
 export const comlekAtolyesi: CardData = {
   id: 3, // uygun id ver

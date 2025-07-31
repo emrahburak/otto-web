@@ -1,5 +1,7 @@
 import type React from "react";
 
+export const fileExtensions = ["png", "jpg", "jpeg", "svg", "JPG"]; // dışardan kontrol edilebilir
+
 export interface IAboutContent {
   title: string;
   content: string;

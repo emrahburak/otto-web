@@ -3,7 +3,15 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import type { CardData } from "../../types/types";
 import CardImage from "../../components/CardImage";
 import { Slugify } from "../../components/Slugify";
+// import { faXTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
+
+// const socialIcon = {
+//   facebook: { id: 1, name: "facebook", icon: <FontAwesomeIcon icon={faFacebook} className="text-lg" />, style: { backgroundColor: "#f2682a" } },
+//   x: { id: 2, name: "x", icon: <FontAwesomeIcon icon={faXTwitter} className="text-lg" />, style: { backgroundColor: "#5b9a42" } },
+//   instagram: { id: 3, name: "instagram", icon: <FontAwesomeIcon icon={faInstagram} className="text-lg" />, style: { backgroundColor: "#efc429" } }
+//
+// }
 
 interface CardProps {
   items: CardData
@@ -26,9 +34,19 @@ export default function Card({ items, variant }: CardProps) {
   ${variant === "activite" ? "bg-gray-01 hover:shadow-xl transition-all duration-200 ease-in-out" : ""}
 `}>
 
+
         <Slugify title={title} disable={variant === "team"}>
-          <CardImage items={items} variant={variant} />
+
+          <div className={`${variant === "team" ? "relative w-full h-full" : ""}`}>
+            <CardImage items={items} variant={variant} />
+            {/* Siyah perde */}
+            <div className={` ${variant === "team" ? "absolute inset-0 bg-black  opacity-0 group-hover:opacity-40 transition-opacity duration-400 ease-in-out pointer-events-none rounded-lg" : "hidden"}`}
+            />
+
+          </div>
         </Slugify>
+
+
 
 
         <div className="grid grid-cols-1 gap-2">
@@ -68,8 +86,8 @@ export default function Card({ items, variant }: CardProps) {
 
       {
         variant === "team" && (
-          <div className="absolute left-0 right-0 -bottom-8 p-6 text-center bg-white
-    transition-all duration-300 ease-in-out group-hover:bottom-0">
+          <div className="absolute left-0 right-0 -bottom-2 p-6 text-center bg-white
+    transition-all duration-300 ease-in-out group-hover:bottom-3">
             <p className="font-display text-3xl">{user?.name}</p>
             <span className="font-display-02 text-gray-500">{user?.position}</span>
             <div className="mt-2 flex justify-center gap-4 opacity-0 translate-y-4
@@ -80,7 +98,7 @@ export default function Card({ items, variant }: CardProps) {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-blue-500"
+                  className=" rounded-3xl flex items-center justify-center  text-sm "
                 >
                   {social.title}
                 </a>

@@ -1,15 +1,20 @@
+import { useMemo } from "react";
 import AboutField from "../../components/AboutField";
 import Carousel from "../../components/Carousel";
 import LocationField from "../../components/LocationField";
 import Slide from "../../components/Slide";
 import { ContactData } from "../../data/contact";
 import { aboutContent } from "../../data/content";
-import { slides } from "../../data/slider";
+import { slides as originalSlides } from "../../data/slider";
 import { workshops } from "../../data/workshop";
+import { shuffleArray } from "../../lib/shuffle";
 import aboutImg from "@/assets/images/comlek/otto-event-comlek-02.jpg";
 
 
 export default function HomePage() {
+
+
+  const slides = useMemo(() => shuffleArray(originalSlides),[])
 
   return (
     <div className="w-full ">

@@ -3,7 +3,8 @@ import type { CardData } from "../../../types/types";
 import cocukOyunIcon from "@/assets/icons/cocuk-oyunu-logo-01.svg";
 
 const images = import.meta.glob(
-  "@/assets/images/cocuk-oyunu/*.{png,jpg,jpeg,svg}",
+  "@/assets/images/cocuk-oyunu/*.{png,jpg,jpeg,svg,JPG}",
+
   {
     eager: true,
     import: "default",

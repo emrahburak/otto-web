@@ -26,25 +26,30 @@ export default function CardImage({ items, variant }: CardProps) {
       {imgSrc ? (
         <div
           className={`
-            ${variant === "default" || variant === "activite"
-              ? "w-24 h-24 rounded-full bg-orange-01 flex items-center justify-center mx-auto"
-              : ""}
-          `}
+      ${variant === "team"
+              ? "w-full aspect-[3/2] rounded-lg overflow-hidden flex items-center justify-center bg-gray-100"
+              : "w-24 h-24 rounded-full bg-orange-01 flex items-center justify-center mx-auto"
+            }
+    `}
         >
           <img
             src={imgSrc}
             alt={title}
             className={`
-              ${variant === "default" || variant === "activite" ? "w-12 h-12 object-contain filter invert brightness-0" : ""}
-              ${variant === "team" ? "w-full object-cover" : ""}
-            `}
+        ${variant === "team"
+                ? "w-full h-full object-cover"
+                : "w-12 h-12 object-contain filter invert brightness-0"
+              }
+      `}
           />
         </div>
       ) : (
         <div
           className={`
-            ${variant === "default" || variant === "activite" ? "w-full h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm" : ""}
-          `}
+      ${variant === "default" || variant === "activite"
+              ? "w-full h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm"
+              : ""}
+    `}
         >
           Görsel yok
         </div>

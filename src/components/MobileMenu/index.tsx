@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "../../ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import ottoLogo from "@/assets/otto-logo.png"
+import ottoLogo from "@/assets/logo/otto-doga-logo.png"
 import type { headLink } from "../../types/types";
 
 
