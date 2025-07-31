@@ -5,12 +5,18 @@ import { ContactData } from "../../data/contact";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { extractCoordinates, getPlatformMapLink } from "../../lib/mapUtil";
 import { Button } from "../../ui/Button";
+import { useSeo } from "../../lib/useSeo";
 
 
 
 export default function ContactPage() {
-  const contactData = ContactData
 
+  useSeo({
+    title: "İletişim – Otto Doğa Okulu",
+    description: "Otto Doğa Okulu ile iletişime geçin. Sorularınız, görüşleriniz ve kayıt işlemleri için bize ulaşabilirsiniz."
+  });
+
+  const contactData = ContactData
   const mapUrl = contactData.map
   const location = extractCoordinates(mapUrl)
 
@@ -24,14 +30,6 @@ export default function ContactPage() {
   }
 
 
-
-  // const scrollToLocation = (e: React.MouseEvent<HTMLAnchorElement>) => {
-  //   e.preventDefault();
-  //   const el = document.getElementById("location-section");
-  //   if (el) {
-  //     el.scrollIntoView({ behavior: "smooth", block: "start" });
-  //   }
-  // };
 
 
   return (

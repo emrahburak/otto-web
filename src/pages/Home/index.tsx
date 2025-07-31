@@ -9,10 +9,15 @@ import { slides as originalSlides } from "../../data/slider";
 import { workshops } from "../../data/workshop";
 import { shuffleArray } from "../../lib/shuffle";
 import aboutImg from "@/assets/images/comlek/otto-event-comlek-02.jpg";
+import { useSeo } from "../../lib/useSeo";
 
 
 export default function HomePage() {
 
+  useSeo({
+    title: "Ana Sayfa – Otto Doğa Okulu",
+    description: "Çocuklar için doğa temelli öğrenme ve keşif olanakları sunan Otto Doğa Okulu’nun ana sayfası."
+  });
 
   const slides = useMemo(() => shuffleArray(originalSlides),[])
 

@@ -1,8 +1,13 @@
 import ActiviteField from "../../components/ActiviteField";
 import BreadCrumb from "../../components/BreadCrumb";
 import { workshops } from "../../data/workshop";
+import { useSeo } from "../../lib/useSeo";
 
 export default function ActivitesPage() {
+  useSeo({
+    title: "Aktiviteler – Otto Doğa Okulu",
+    description: "Otto Doğa Okulu’nun doğa temelli, öğretici ve eğlenceli etkinlikleri hakkında bilgi alın."
+  });
   return (
     <>
       <BreadCrumb

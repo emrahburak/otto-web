@@ -14,9 +14,9 @@ interface FooterProps {
 
 export const Footer = ({ footerItems }: FooterProps) => {
   return (
-    <footer className=" w-full lg:pt-20 sm:pt-10 min-w-screen space-y-10 py-10">
+    <footer className=" w-full lg:pt-20 sm:pt-10 min-w-screen space-y-10 pt-10">
 
-      <div className="flex flex-nowrap items-center justify-center gap-5 lg:hidden mb-5">
+      <div className="flex flex-nowrap items-center justify-evenly  lg:hidden mb-5">
         <Link to="/" >
           <img src={ottoLogo} alt="otto doğa okulu" className="object-cover w-28" />
         </Link>
@@ -31,10 +31,6 @@ export const Footer = ({ footerItems }: FooterProps) => {
 
         {/* Orta Logo */}
         <div className="hidden lg:flex flex-row flex-nowrap items-center justify-start gap-3 ">
-          <a href="https://ottodogapark.com/" target="_blank">
-            <img src={ottoParkLogo} alt="otto doğa park" className="object-cover w-24 " />
-          </a>
-
           <Link to="/" >
             <img src={ottoLogo} alt="otto doğa okulu" className="object-cover w-28" />
           </Link>
@@ -50,32 +46,37 @@ export const Footer = ({ footerItems }: FooterProps) => {
             ))}
           </div>
         ))}
+
+        <div className="hidden lg:flex flex-row flex-nowrap items-center justify-start gap-3 ">
+          <a href="https://ottodogapark.com/" target="_blank">
+            <img src={ottoParkLogo} alt="otto doğa park" className="object-cover w-24 " />
+          </a>
+        </div>
+
       </div>
 
 
-
-      <section className="w-full max-w-6xl mx-auto flex items-center  justify-center">
-        <div className="text-sm text-gray-500">
-          <h2 className="font-semibold font-display text-center text-lg">Bize Ulaşın</h2>
-          <p className="font-semibold text-center font-display-02">OTTO DOĞA PARK / OTTO DOĞA OKULU</p>
-          <p className="text-center font-display-02">Kurna Mah. Kurtdoğmuş Yolu Cad. No: 63/1 Pendik – İstanbul</p>
+      <section className="w-full h-full min-h-[288px] bg-[url(@/assets/ui/bg-footer.png)] bg-cover bg-bottom bg-no-repeat flex flex-col items-center justify-center">
+        <div className="w-full max-w-6xl mx-auto flex items-center  justify-center ">
+          <div className="text-sm text-gray-500">
+            <h2 className="font-semibold font-display text-center text-lg">Bize Ulaşın</h2>
+            <p className="font-semibold text-center font-display-02">OTTO DOĞA PARK / OTTO DOĞA OKULU</p>
+            <p className="text-center font-display-02">Kurna Mah. Kurtdoğmuş Yolu Cad. No: 63/1 Pendik – İstanbul</p>
+          </div>
         </div>
 
+        <div className="text-xs text-gray-600 mt-2 text-center"   >
+          © {new Date().getFullYear()} Otto Doğa Okulu,
+          <a href="https://ottodogapark.com" target="_blank" rel="noopener noreferrer" className=" underline  hover:text-black mx-1">
+            <strong>
+              OTTO DOĞA PARK
+            </strong>
+          </a>
+          alanı içerisinde faaliyet göstermekte olup, içeriği <strong>ULUTAŞ SANAT AKADEMİ</strong> ve Prodüksiyon Hizmetleri tarafından hazırlanmıştır.
+        </div>
 
       </section>
 
-
-      {/* Alt kısma arka plan görseli */}
-
-      <div className="text-xs text-gray-600 mt-2 text-center">
-        © {new Date().getFullYear()} Otto Doğa Okulu,
-        <a href="https://ottodogapark.com" target="_blank" rel="noopener noreferrer" className=" underline  hover:text-black mx-1">
-          <strong>
-            OTTO DOĞA PARK
-          </strong>
-        </a>
-        alanı içerisinde faaliyet göstermekte olup, içeriği <strong>ULUTAŞ SANAT AKADEMİ</strong> ve Prodüksiyon Hizmetleri tarafından hazırlanmıştır.
-      </div>
 
 
 
