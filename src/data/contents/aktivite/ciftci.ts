@@ -2,13 +2,18 @@ import type { CardData } from "../../../types/types";
 
 import gardeningIcon from "@/assets/icons/gardening-logo-01.svg";
 
-const images = import.meta.glob(
-  "@/assets/images/ciftci/*.{png,jpg,jpeg,svg,JPG}",
-  {
-    eager: true,
-    import: "default",
-  },
-);
+// const images = import.meta.glob(
+//   "@/assets/images/ciftci/*.{png,jpg,jpeg,svg,JPG}",
+//   {
+//     eager: true,
+//     import: "default",
+//   },
+// );
+
+const images = import.meta.glob("@/assets/images/ciftci/*.webp", {
+  eager: true,
+  import: "default",
+});
 
 export const ciftciCocukAtolyesi: CardData = {
   id: 2,

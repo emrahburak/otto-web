@@ -1,13 +1,18 @@
 import type { CardData } from "../../../types/types";
 import futbolIcon from "@/assets/icons/futbol-logo.svg";
 
-const images = import.meta.glob(
-  "@/assets/images/spor-atis/*.{png,jpg,jpeg,svg,JPG}",
-  {
-    eager: true,
-    import: "default",
-  },
-);
+// const images = import.meta.glob(
+//   "@/assets/images/spor-atis/*.{png,jpg,jpeg,svg,JPG}",
+//   {
+//     eager: true,
+//     import: "default",
+//   },
+// );
+
+const images = import.meta.glob("@/assets/images/spor-atis/*.webp", {
+  eager: true,
+  import: "default",
+});
 
 export const futbolVoleybolAtis: CardData = {
   id: 9,

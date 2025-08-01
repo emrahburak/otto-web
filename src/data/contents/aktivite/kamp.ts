@@ -1,13 +1,18 @@
 import campingIcon from "@/assets/icons/camping-logo-03.svg";
 import type { CardData } from "../../../types/types";
 
-const images = import.meta.glob(
-  "@/assets/images/kamp/*.{png,jpg,jpeg,svg,JPG}",
-  {
-    eager: true,
-    import: "default",
-  },
-);
+// const images = import.meta.glob(
+//   "@/assets/images/kamp/*.{png,jpg,jpeg,svg,JPG}",
+//   {
+//     eager: true,
+//     import: "default",
+//   },
+// );
+
+const images = import.meta.glob("@/assets/images/kamp/*.webp", {
+  eager: true,
+  import: "default",
+});
 
 export const kampVeCadirAtolyesi: CardData = {
   id: 4, // uygun id ver

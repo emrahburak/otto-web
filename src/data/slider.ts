@@ -1,13 +1,18 @@
 import type { SlideContent } from "../types/types";
 
 // 1. Görselleri topla
-const imageImports = import.meta.glob(
-  "@/assets/slider/*.{png,jpg,jpeg,svg,JPG}",
-  {
-    eager: true,
-    import: "default",
-  },
-);
+// const imageImports = import.meta.glob(
+//   "@/assets/slider/*.{png,jpg,jpeg,svg,JPG}",
+//   {
+//     eager: true,
+//     import: "default",
+//   },
+// );
+
+const imageImports = import.meta.glob("@/assets/slider/*.webp", {
+  eager: true,
+  import: "default",
+});
 
 // 2. Varsayılan açıklamalar ve banner'lar
 const banners = [

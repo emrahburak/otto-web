@@ -2,13 +2,18 @@ import type { CardData } from "../../../types/types";
 
 import ziplineLogo from "@/assets/icons/zipline-logo-01.svg";
 
-const images = import.meta.glob(
-  "@/assets/images/zipline-survivor/*.{png,jpg,jpeg,svg,JPG}",
-  {
-    eager: true,
-    import: "default",
-  },
-);
+// const images = import.meta.glob(
+//   "@/assets/images/zipline-survivor/*.{png,jpg,jpeg,svg,JPG}",
+//   {
+//     eager: true,
+//     import: "default",
+//   },
+// );
+
+const images = import.meta.glob("@/assets/images/zipline-survivor/*.webp", {
+  eager: true,
+  import: "default",
+});
 
 export const ziplineSurvivorParkuru: CardData = {
   id: 10,
