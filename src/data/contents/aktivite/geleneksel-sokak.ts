@@ -1,13 +1,18 @@
 import gelenekselLogo from "@/assets/icons/geleneksel-sokak-logo-01.svg";
 import type { CardData } from "../../../types/types";
 
-const images = import.meta.glob(
-  "@/assets/images/geleneksel/*.{png,jpg,jpeg,svg,JPG}",
-  {
-    eager: true,
-    import: "default",
-  },
-);
+// const images = import.meta.glob(
+//   "@/assets/images/geleneksel/*.{png,jpg,jpeg,svg,JPG}",
+//   {
+//     eager: true,
+//     import: "default",
+//   },
+// );
+
+const images = import.meta.glob("@/assets/images/geleneksel/*.webp", {
+  eager: true,
+  import: "default",
+});
 
 export const gelenekselSokakOyunlariAtolyesi: CardData = {
   id: 11, // uygun ID ver

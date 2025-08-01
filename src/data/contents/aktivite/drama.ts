@@ -2,13 +2,18 @@ import type { CardData } from "../../../types/types";
 
 import dramaIcon from "@/assets/icons/drama-logo-01.svg";
 
-const images = import.meta.glob(
-  "@/assets/images/drama/*.{png,jpg,jpeg,svg,JPG}",
-  {
-    eager: true,
-    import: "default",
-  },
-);
+// const images = import.meta.glob(
+//   "@/assets/images/drama/*.{png,jpg,jpeg,svg,JPG}",
+//   {
+//     eager: true,
+//     import: "default",
+//   },
+// );
+
+const images = import.meta.glob("@/assets/images/drama/*.webp", {
+  eager: true,
+  import: "default",
+});
 
 export const dramaAtolyesi: CardData = {
   id: 11,

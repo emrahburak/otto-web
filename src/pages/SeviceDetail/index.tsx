@@ -43,30 +43,33 @@ export default function ServiceDetailPage() {
 
         <div className="w-full">
           {service.images && service.images.length > 0 ? (
-            <div ref={galleryRef}
+            <div
+              ref={galleryRef}
               className={`grid gap-4 grid-cols-2 ${service.images.length % 4 === 0
                   ? 'md:grid-cols-4'
                   : service.images.length % 3 === 0
                     ? 'md:grid-cols-3'
                     : 'md:grid-cols-2'
-                }`}>
-              {service.images.map((img, idx) => (
-                <a
-                  key={idx}
-                  data-fancybox="gallery"
-                  href={img}
-                >
-                  <div className="relative w-full h-60 overflow-hidden rounded-xl shadow-md">
-                    <img
-                      src={img}
-                      alt={`Görsel ${idx + 1}`}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  </div>
-                </a>
-              ))}
-            </div>
-          ) : (
+                }`}
+            >
+              {service.images.map((img, idx) => {
+                const webpSrc = img.replace(/\.(jpg|jpeg|png)$/i, ".webp");
+                return (
+                  <a key={idx} data-fancybox="gallery" href={webpSrc}>
+                    <div className="relative w-full h-60 overflow-hidden rounded-xl shadow-md">
+                      <picture>
+                        <source srcSet={webpSrc} type="image/webp" />
+                        <img
+                          src={img}
+                          alt={`Görsel ${idx + 1}`}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                      </picture>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>) : (
             <div className="w-full h-40 bg-gray-200 rounded-lg mb-4 flex items-center justify-center text-gray-400 text-sm">
               Görsel yok
             </div>
