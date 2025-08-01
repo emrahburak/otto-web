@@ -2,13 +2,18 @@ import ridingIcon from "@/assets/icons/horse-riding-logo-01.svg";
 
 import type { CardData } from "../../../types/types";
 
-const images = import.meta.glob(
-  `@/assets/images/binicilik/*.{png,jpg,jpeg,svg,JPG}`,
-  {
-    eager: true,
-    import: "default",
-  },
-);
+// const images = import.meta.glob(
+//   `@/assets/images/binicilik/*.{png,jpg,jpeg,svg,JPG}`,
+//   {
+//     eager: true,
+//     import: "default",
+//   },
+// );
+
+const images = import.meta.glob(`@/assets/images/binicilik/*.webp`, {
+  eager: true,
+  import: "default",
+});
 
 export const binicilikAtolyesi: CardData = {
   id: 1,
