@@ -66,19 +66,19 @@ export const Footer = ({ footerItems }: FooterProps) => {
         </div>
 
         <div className="text-xs text-gray-600 mt-2 text-center"   >
-          © {new Date().getFullYear()} Otto Doğa Okulu,
+          © {new Date().getFullYear()} Otto Doğa Okulu. Web sitesi
           <a href="https://ottodogapark.com" target="_blank" rel="noopener noreferrer" className=" underline  hover:text-black mx-1">
             <strong>
               OTTO DOĞA PARK
             </strong>
           </a>
-          alanı içerisinde faaliyet göstermekte olup, içeriği <strong>ULUTAŞ SANAT AKADEMİ</strong> ve Prodüksiyon Hizmetleri tarafından hazırlanmıştır.
+          içerisinde faaliyet gösteren Otto Doğa Okulu için hazırlanmış olup, içerik katkıları <strong>ULUTAŞ SANAT AKADEMİ</strong> ve Prodüksiyon Hizmetleri tarafından sağlanmıştır..
+        </div>
+        <div className="text-xs text-gray-600 mt-1 text-center">
+          Web altyapısı ve arayüz geliştirmesi: <a href="https://github.com/emrahburak" target="_blank" rel="noopener noreferrer" className=" hover:text-black">github.com/emrahburak</a>
         </div>
 
       </section>
-
-
-
 
     </footer>
 
