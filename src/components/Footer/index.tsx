@@ -14,7 +14,7 @@ interface FooterProps {
 
 export const Footer = ({ footerItems }: FooterProps) => {
   return (
-    <footer className=" w-full lg:pt-20 sm:pt-10 min-w-screen space-y-10 pt-10">
+    <footer className=" w-full lg:pt-20 sm:pt-10  space-y-10 pt-10">
 
       <div className="flex flex-nowrap items-center justify-evenly  lg:hidden mb-5">
         <Link to="/" >
