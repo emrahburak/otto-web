@@ -9,7 +9,7 @@ import type { CardData } from "../../../types/types";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/kukla/*.webp", {
+const images = import.meta.glob("@/assets/images/kukla/webp/*.webp", {
   eager: true,
   import: "default",
 });

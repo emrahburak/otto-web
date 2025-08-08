@@ -9,7 +9,7 @@ import futbolIcon from "@/assets/icons/futbol-logo.svg";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/spor-atis/*.webp", {
+const images = import.meta.glob("@/assets/images/spor-atis/webp/*.webp", {
   eager: true,
   import: "default",
 });

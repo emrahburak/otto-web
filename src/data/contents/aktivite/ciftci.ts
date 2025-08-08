@@ -10,7 +10,7 @@ import gardeningIcon from "@/assets/icons/gardening-logo-01.svg";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/ciftci/*.webp", {
+const images = import.meta.glob("@/assets/images/ciftci/webp/*.webp", {
   eager: true,
   import: "default",
 });

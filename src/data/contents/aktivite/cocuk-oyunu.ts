@@ -12,7 +12,7 @@ import cocukOyunIcon from "@/assets/icons/cocuk-oyunu-logo-01.svg";
 // );
 
 const images = import.meta.glob(
-  "@/assets/images/cocuk-oyunu/*.webp",
+  "@/assets/images/cocuk-oyunu/webp/*.webp",
 
   {
     eager: true,

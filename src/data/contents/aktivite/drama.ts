@@ -10,7 +10,7 @@ import dramaIcon from "@/assets/icons/drama-logo-01.svg";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/drama/*.webp", {
+const images = import.meta.glob("@/assets/images/drama/webp/*.webp", {
   eager: true,
   import: "default",
 });

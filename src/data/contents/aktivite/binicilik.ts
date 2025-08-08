@@ -10,7 +10,7 @@ import type { CardData } from "../../../types/types";
 //   },
 // );
 
-const images = import.meta.glob(`@/assets/images/binicilik/*.webp`, {
+const images = import.meta.glob(`@/assets/images/binicilik/webp/*.webp`, {
   eager: true,
   import: "default",
 });

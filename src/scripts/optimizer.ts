@@ -13,20 +13,31 @@ const EXTENSIONS = [".jpg", ".jpeg", ".png", ".JPG"];
   const filesToConvert = files
     .filter((file) => EXTENSIONS.includes(path.extname(file)))
     .filter((file) => {
-      const webpPath = file.replace(/\.(jpg|jpeg|png|JPG)$/i, ".webp");
+      const dir = path.dirname(file);
+      const baseName = path
+        .basename(file)
+        .replace(/\.(jpg|jpeg|png|JPG)$/i, ".webp");
+      const webpPath = path.join(dir, "webp", baseName);
       return !fs.existsSync(webpPath);
     });
 
   // 2. Artık karşılığı olmayan .webp dosyalarını bul ve sil
-  const webpFiles = files.filter((file) => file.endsWith(".webp"));
+  const webpFiles = await fg("src/assets/**/webp/*.webp", {
+    dot: false,
+    onlyFiles: true,
+  });
+
   webpFiles.forEach((webpFile) => {
-    const originalFile = webpFile.replace(/\.webp$/i, "");
+    const baseName = path.basename(webpFile, ".webp");
+    const originalDir = path.resolve(path.dirname(webpFile), "..");
+
     const hasSource = EXTENSIONS.some((ext) =>
-      fs.existsSync(originalFile + ext),
+      fs.existsSync(path.join(originalDir, baseName + ext)),
     );
+
     if (!hasSource) {
       fs.unlinkSync(webpFile);
-      console.log("🧹 Silindi:", path.basename(webpFile));
+      console.log("🧹 Silindi:", path.relative(process.cwd(), webpFile));
     }
   });
 
@@ -37,9 +48,25 @@ const EXTENSIONS = [".jpg", ".jpeg", ".png", ".JPG"];
   }
 
   filesToConvert.forEach((file) => {
-    const output = file.replace(/\.(jpg|jpeg|png|JPG)$/i, ".webp");
-    const cmd = `cwebp -q 75 "${file}" -o "${output}"`;
-    console.log("📦", path.basename(file), "→", path.basename(output));
+    const dir = path.dirname(file);
+    const baseName = path
+      .basename(file)
+      .replace(/\.(jpg|jpeg|png|JPG)$/i, ".webp");
+    const outputDir = path.join(dir, "webp");
+
+    // webp/ klasörü yoksa oluştur
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir);
+    }
+
+    const outputPath = path.join(outputDir, baseName);
+    const cmd = `cwebp -q 75 "${file}" -o "${outputPath}"`;
+    console.log(
+      "📦",
+      path.basename(file),
+      "→",
+      path.relative(process.cwd(), outputPath),
+    );
     execSync(cmd);
   });
 

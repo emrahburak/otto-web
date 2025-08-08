@@ -10,7 +10,7 @@ import summerIcon from "@/assets/icons/summer-logo-02.svg";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/yaz-okulu/*.webp", {
+const images = import.meta.glob("@/assets/images/yaz-okulu/webp/*.webp", {
   eager: true,
   import: "default",
 });

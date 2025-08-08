@@ -9,7 +9,7 @@ import type { SlideContent } from "../types/types";
 //   },
 // );
 
-const imageImports = import.meta.glob("@/assets/slider/*.webp", {
+const imageImports = import.meta.glob("@/assets/slider/webp/*.webp", {
   eager: true,
   import: "default",
 });
@@ -18,7 +18,7 @@ const imageImports = import.meta.glob("@/assets/slider/*.webp", {
 const banners = [
   "Özgürlüğe Yelken Aç",
   "Kendini yeniden keşfet",
-  "Sanatın ve eğlencenin bulunduğu yer",
+  "Sanatın ve eğlencenin buluştuğu yer",
   "Doğanın ritmine kulak ver",
   "Ruhunu dinle",
   "Adım adım içsel keşif",
