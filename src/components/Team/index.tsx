@@ -16,7 +16,7 @@ export default function Team({ members }: TeamProps) {
           <div className="flex items-center justify-center w-full mb-8">
             <Card items={members[0]} variant="team" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {members.slice(1).map(member => (
               <div key={member.id} className="flex items-center justify-center">
                 <Card items={member} variant="team" />

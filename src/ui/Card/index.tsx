@@ -86,8 +86,8 @@ export default function Card({ items, variant }: CardProps) {
 
       {
         variant === "team" && (
-          <div className="absolute left-0 right-0 -bottom-2 p-6 text-center bg-white
-    transition-all duration-300 ease-in-out group-hover:bottom-3">
+          <div className="absolute left-0 right-0 -bottom-3 p-6 text-center bg-white
+    transition-all duration-300 ease-in-out group-hover:bottom-0">
             <p className="font-display text-3xl">{user?.name}</p>
             <span className="font-display-02 text-gray-500">{user?.position}</span>
             <div className="mt-2 flex justify-center gap-4 opacity-0 translate-y-4

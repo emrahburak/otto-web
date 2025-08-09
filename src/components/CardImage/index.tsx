@@ -37,7 +37,7 @@ export default function CardImage({ items, variant }: CardProps) {
             alt={title}
             className={`
         ${variant === "team"
-                ? "w-full h-full object-cover"
+                ? " object-contain"
                 : "w-12 h-12 object-contain filter invert brightness-0"
               }
       `}
