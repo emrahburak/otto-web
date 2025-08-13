@@ -1,7 +1,7 @@
 import fg from "fast-glob";
 import fs from "fs";
 import path from "path";
-import { execSync } from "child_process";
+import sharp from "sharp"; // Sharp eklendi
 import { pathsToOptimize } from "./optimizer.config";
 
 const EXTENSIONS = [".jpg", ".jpeg", ".png", ".JPG"];
@@ -47,7 +47,7 @@ const EXTENSIONS = [".jpg", ".jpeg", ".png", ".JPG"];
     process.exit(0);
   }
 
-  filesToConvert.forEach((file) => {
+  for (const file of filesToConvert) {
     const dir = path.dirname(file);
     const baseName = path
       .basename(file)
@@ -60,15 +60,19 @@ const EXTENSIONS = [".jpg", ".jpeg", ".png", ".JPG"];
     }
 
     const outputPath = path.join(outputDir, baseName);
-    const cmd = `cwebp -q 75 "${file}" -o "${outputPath}"`;
+
     console.log(
       "📦",
       path.basename(file),
       "→",
       path.relative(process.cwd(), outputPath),
     );
-    execSync(cmd);
-  });
 
-  console.log("🎉 Optimize işlemi tamamlandı.");
+    await sharp(file)
+      .rotate() // EXIF orientation'a göre düzeltir
+      .webp({ quality: 75 })
+      .toFile(outputPath);
+  }
+
+  console.log("🎉 Optimize işlemi tamamlandı (EXIF düzeltme dahil).");
 })();
