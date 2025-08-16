@@ -26,65 +26,16 @@ export default function ServiceDetailPage() {
     const loaders = service.images as (() => Promise<string>)[];
     let isMounted = true;
 
-    // Throttle için yardımcı
-    let throttleTimeout: NodeJS.Timeout | null = null;
-    const throttle = (fn: () => void, wait = 200) => {
-      if (throttleTimeout) return;
-      throttleTimeout = setTimeout(() => {
-        fn();
-        throttleTimeout = null;
-      }, wait);
-    };
-
-    const loadAndSetImages = async () => {
-      const loaded = await Promise.all(loaders.map(loader => loader() as Promise<string>));
-
-      // Tekil URL’ler ve geçerli webp dosyaları
-      const uniqueImages = Array.from(new Set(loaded))
-        .filter(img => img.endsWith(".webp"));
-
-      // Mobil kontrolü
-      const isMobile = window.matchMedia("(max-width: 640px)").matches;
-
-      // Final images
-      const finalImages = uniqueImages
-        .map(img => {
-          const webpSrc = img.replace(/\.(jpg|jpeg|png)$/i, ".webp");
-          return isMobile
-            ? webpSrc.includes("-sm.webp") ? webpSrc : webpSrc.replace(".webp", "-sm.webp")
-            : webpSrc.replace("-sm.webp", ".webp");
-        })
-        .filter((v, i, a) => a.indexOf(v) === i); // Son duplicate temizleme
-
-      if (isMounted) setLoadedImages(finalImages);
-    };
-
-    loadAndSetImages();
-
-    const resizeListener = () => throttle(loadAndSetImages, 200);
-    window.addEventListener("resize", resizeListener);
-
-    return () => {
-      isMounted = false;
-      if (throttleTimeout) clearTimeout(throttleTimeout);
-      window.removeEventListener("resize", resizeListener);
-    };
-  }, [service?.images]);
+    Promise.all(loaders.map(loader => loader() as Promise<string>))
+      .then(images => {
+        if (isMounted) setLoadedImages(images)
+      })
+    return () => { isMounted = false; }
+  }, [service?.images])
 
 
   useEffect(() => {
-    if (loadedImages.length === 0) return;
-
-    // Önce eski bindingleri temizle
-    NativeFancybox.unbind("[data-fancybox]");
-
-    // Yeni galeriyi bind et
-    NativeFancybox.bind("[data-fancybox]", {
-      // opsiyonlar burada
-      groupAttr: "data-fancybox",
-    });
-
-    // Cleanup
+    NativeFancybox.bind("[data-fancybox]");
     return () => {
       NativeFancybox.unbind("[data-fancybox]");
     };
@@ -118,12 +69,12 @@ export default function ServiceDetailPage() {
                 }`}
             >
               {loadedImages.map((img, idx) => {
-                // Örnek: image.webp → image-sm.webp
+                const webpSrc = img.replace(/\.(jpg|jpeg|png)$/i, ".webp");
                 return (
-                  <a key={idx} data-fancybox="gallery" href={img}>
+                  <a key={idx} data-fancybox="gallery" href={webpSrc}>
                     <div className="relative w-full h-60 overflow-hidden rounded-xl shadow-md">
                       <picture>
-                        <source srcSet={img} type="image/webp" />
+                        <source srcSet={webpSrc} type="image/webp" />
                         <img
                           src={img}
                           alt={`Görsel ${idx + 1}`}
