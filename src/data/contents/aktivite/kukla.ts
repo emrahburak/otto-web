@@ -9,8 +9,8 @@ import type { CardData } from "../../../types/types";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/kukla/webp/*.webp", {
-  eager: true,
+const imageLoaders = import.meta.glob("@/assets/images/kukla/webp/*.webp", {
+  eager: false,
   import: "default",
 });
 
@@ -19,7 +19,8 @@ export const kuklaAtolyesi: CardData = {
   title: "Kukla Atölyesi",
   description: "Kendi kuklanı yap, ona hayat ver ve sahneye taşı",
   logo: puppetIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
+
   content: `
     <p>Kendi kuklanı yap, ona hayat ver ve sahneye taşı.</p>
     <p>Bir ip, bir çorap, biraz hayal gücü… Ve sahne hazır!</p>

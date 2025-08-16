@@ -11,11 +11,11 @@ import cocukOyunIcon from "@/assets/icons/cocuk-oyunu-logo-01.svg";
 //   },
 // );
 
-const images = import.meta.glob(
+const imageLoaders = import.meta.glob(
   "@/assets/images/cocuk-oyunu/webp/*.webp",
 
   {
-    eager: true,
+    eager: false,
     import: "default",
   },
 );
@@ -25,7 +25,7 @@ export const cocukOyunu: CardData = {
   title: "Çocuk Oyunu",
   description: "Fiko’yu tanıyın, onunla öğrenin, onunla büyüyün!",
   logo: cocukOyunIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
     <p>Dev kuklamız Fiko, çocukların kalbine dokunmaya geliyor!</p>
     <p>Hijyen, temizlik alışkanlıkları ve büyüklere saygı gibi değerleri eğlenceli bir dille anlatan, müzikli ve interaktif bir çocuk tiyatrosudur.</p>

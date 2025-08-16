@@ -9,8 +9,8 @@ import futbolIcon from "@/assets/icons/futbol-logo.svg";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/spor-atis/webp/*.webp", {
-  eager: true,
+const imageLoaders = import.meta.glob("@/assets/images/spor-atis/webp/*.webp", {
+  eager: false,
   import: "default",
 });
 
@@ -20,7 +20,7 @@ export const futbolVoleybolAtis: CardData = {
   description:
     "Ormanın ortasında birlikte hareket etmenin, takım ruhunun ve odaklanmanın oyunla buluştuğu anlar!",
   logo: futbolIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
     <p>Ormanın ortasında birlikte hareket etmenin, takım ruhunun ve odaklanmanın oyunla buluştuğu anlar!</p>
 

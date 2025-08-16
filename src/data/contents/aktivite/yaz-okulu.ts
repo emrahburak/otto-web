@@ -10,8 +10,8 @@ import summerIcon from "@/assets/icons/summer-logo-02.svg";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/yaz-okulu/webp/*.webp", {
-  eager: true,
+const imageLoaders = import.meta.glob("@/assets/images/yaz-okulu/webp/*.webp", {
+  eager: false,
   import: "default",
 });
 
@@ -20,7 +20,7 @@ export const yazOkulu: CardData = {
   title: "Yaz Okulu",
   description: "Doğanın kalbinde, oyunla öğrenmenin ve keşfetmenin tam zamanı!",
   logo: summerIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
     <p>Doğanın kalbinde, oyunla öğrenmenin ve keşfetmenin tam zamanı! Survivor parkuru, zipline, çömlek ve mutfak atölyeleri, doğada drama ve daha fazlasıyla dolu dolu bir yaz sizi bekliyor.</p>
     <h2>Yaz Okulumuzda neler mi var:</h2>

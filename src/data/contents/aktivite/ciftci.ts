@@ -10,8 +10,8 @@ import gardeningIcon from "@/assets/icons/gardening-logo-01.svg";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/ciftci/webp/*.webp", {
-  eager: true,
+const imageLoaders = import.meta.glob("@/assets/images/ciftci/webp/*.webp", {
+  eager: false,
   import: "default",
 });
 
@@ -20,7 +20,7 @@ export const ciftciCocukAtolyesi: CardData = {
   title: "Çiftçi Çocuk Atölyesi",
   description: "Toprağa dokun, doğayla dost ol, üretmenin keyfini yaşa.",
   logo: gardeningIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
 
 <p>Toprağa dokun, doğayla dost ol, üretmenin keyfini yaşa.</p>

@@ -3,9 +3,11 @@ import slugify from "slugify";
 import { workshops } from "../../data/workshop";
 import BreadCrumb from "../../components/BreadCrumb";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Fancybox as NativeFancybox } from "@fancyapps/ui/dist/fancybox/";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+import "./style.css"
 
 
 export default function ServiceDetailPage() {
@@ -17,13 +19,27 @@ export default function ServiceDetailPage() {
   });
 
   const galleryRef = useRef<HTMLDivElement | null>(null);
+  const [loadedImages, setLoadedImages] = useState<string[]>([])
+
+  useEffect(() => {
+    if (!service?.images) return;
+    const loaders = service.images as (() => Promise<string>)[];
+    let isMounted = true;
+
+    Promise.all(loaders.map(loader => loader() as Promise<string>))
+      .then(images => {
+        if (isMounted) setLoadedImages(images)
+      })
+    return () => { isMounted = false; }
+  }, [service?.images])
+
 
   useEffect(() => {
     NativeFancybox.bind("[data-fancybox]");
     return () => {
       NativeFancybox.unbind("[data-fancybox]");
     };
-  }, [service?.images?.length]);
+  }, [loadedImages]);
 
   if (!service) {
     return <div>Etkinlik bulunamadı.</div>;
@@ -42,17 +58,17 @@ export default function ServiceDetailPage() {
         <h1 className="text-3xl font-bold mb-6 text-center">{service.title}</h1>
 
         <div className="w-full">
-          {service.images && service.images.length > 0 ? (
+          {loadedImages.length > 0 ? (
             <div
               ref={galleryRef}
-              className={`grid gap-4 grid-cols-2 ${service.images.length % 4 === 0
-                  ? 'md:grid-cols-4'
-                  : service.images.length % 3 === 0
-                    ? 'md:grid-cols-3'
-                    : 'md:grid-cols-2'
+              className={`grid gap-4 grid-cols-2 ${loadedImages.length % 4 === 0
+                ? 'md:grid-cols-4'
+                : loadedImages.length % 3 === 0
+                  ? 'md:grid-cols-3'
+                  : 'md:grid-cols-2'
                 }`}
             >
-              {service.images.map((img, idx) => {
+              {loadedImages.map((img, idx) => {
                 const webpSrc = img.replace(/\.(jpg|jpeg|png)$/i, ".webp");
                 return (
                   <a key={idx} data-fancybox="gallery" href={webpSrc}>
@@ -62,7 +78,9 @@ export default function ServiceDetailPage() {
                         <img
                           src={img}
                           alt={`Görsel ${idx + 1}`}
-                          className="absolute inset-0 w-full h-full object-cover"
+                          loading="lazy"
+                          className={`absolute inset-0 w-full h-full object-cover blur`}
+                          onLoad={(e) => e.currentTarget.classList.add('loaded')}
                         />
                       </picture>
                     </div>

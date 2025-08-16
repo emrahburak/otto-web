@@ -10,8 +10,8 @@ import type { CardData } from "../../../types/types";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/ebru/webp/*.webp", {
-  eager: true,
+const imageLoaders = import.meta.glob("@/assets/images/ebru/webp/*.webp", {
+  eager: false,
   import: "default",
 });
 
@@ -20,7 +20,7 @@ export const ebruAtolyesi: CardData = {
   title: "Ebru Atölyesi",
   description: "Suyun üzerinde renklerle dans etmeye hazır mısınız?",
   logo: ebruIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
 
 <p>Ebru sanatı, sabır, dikkat ve hayal gücünün birleştiği büyülü bir yolculuktur.</p>

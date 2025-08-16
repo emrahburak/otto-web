@@ -46,7 +46,7 @@ export interface CardData {
   description?: string;
   logo?: string; // Eskiden image'ti
   href?: string;
-  images?: string[]; // Eskiden bannerImage'ti, şimdi liste
+  images?: (() => Promise<string>)[]; // string[] yerine
   image?: string;
   content?: string; // Markdown body içeriği (HTML olabilir)
   bannerImage?: string;

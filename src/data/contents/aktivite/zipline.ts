@@ -10,10 +10,10 @@ import ziplineLogo from "@/assets/icons/zipline-logo-01.svg";
 //   },
 // );
 
-const images = import.meta.glob(
+const imageLoaders = import.meta.glob(
   "@/assets/images/zipline-survivor/webp/*.webp",
   {
-    eager: true,
+    eager: false,
     import: "default",
   },
 );
@@ -23,7 +23,7 @@ export const ziplineSurvivorParkuru: CardData = {
   title: "Zipline & Survivor Parkuru",
   description: "Kahkahaların ormanda yankılandığı bir serüven",
   logo: ziplineLogo,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
     <p>Cesaretin, dengeyle buluştuğu; kahkahaların ormanda yankılandığı bir serüven!</p>
     <p>Bu parkurda çocuklar sınırlarını zorlamıyor, kendi cesaretlerini keşfediyor. Yüksekten kaymak, dengede durmak, engelleri aşmak… Her adım bir özgüven, her düşüp kalkış bir öğrenme!</p>

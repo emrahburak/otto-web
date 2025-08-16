@@ -9,17 +9,20 @@ import type { CardData } from "../../../types/types";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/okul-gezisi/webp/*.webp", {
-  eager: true,
-  import: "default",
-});
+const imageLoaders = import.meta.glob(
+  "@/assets/images/okul-gezisi/webp/*.webp",
+  {
+    eager: false,
+    import: "default",
+  },
+);
 
 export const okulGezisi: CardData = {
   id: 14,
   title: "Okul Gezisi",
   description: "Sınıfınızı alın, doğanın kalbine davetlisiniz!",
   logo: okulGeziIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
     <p>Okullar için hazırladığımız günübirlik doğa gezilerinde çocuklar, doğanın içinde özgürce oynuyor, öğreniyor ve keşfediyor.</p>
     <p>Survivor, Bowling, zipline, doğa yürüyüşü, drama ve atölye çalışmalarıyla dolu bu özel gün; çocuklara unutulmaz bir deneyim sunarken, öğretmenler için de keyifli ve dinlendirici bir mola oluyor.</p>

@@ -10,8 +10,8 @@ import type { CardData } from "../../../types/types";
 //   },
 // );
 
-const images = import.meta.glob(`@/assets/images/binicilik/webp/*.webp`, {
-  eager: true,
+const imageLoaders = import.meta.glob(`@/assets/images/binicilik/webp/*.webp`, {
+  eager: false,
   import: "default",
 });
 
@@ -20,7 +20,7 @@ export const binicilikAtolyesi: CardData = {
   title: "Binicilik Atölyesi",
   description: "Atlarla tanış, doğayla uyum içinde denge kur.",
   logo: ridingIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
 
 <p>Atlarla tanış, doğayla uyum içinde denge kur.</p>

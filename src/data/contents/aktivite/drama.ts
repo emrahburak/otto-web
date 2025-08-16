@@ -10,8 +10,8 @@ import dramaIcon from "@/assets/icons/drama-logo-01.svg";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/drama/webp/*.webp", {
-  eager: true,
+const imageLoaders = import.meta.glob("@/assets/images/drama/webp/*.webp", {
+  eager: false,
   import: "default",
 });
 
@@ -20,7 +20,7 @@ export const dramaAtolyesi: CardData = {
   title: "Drama Eğitimi",
   description: "Hayal gücünü keşfet, rol yaparak ifade becerini geliştir.",
   logo: dramaIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
     <p>Hayal gücünün sınırlarını zorla, sahnede kendini özgürce ifade et.</p>
     <p>Drama Atölyesi’nde çocuklar; rol yapmayı öğrenirken duygularını keşfeder, özgüvenlerini artırır ve iletişim becerilerini güçlendirir.</p>

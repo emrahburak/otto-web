@@ -9,8 +9,8 @@ import type { CardData } from "../../../types/types";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/mutfak/webp/*.webp", {
-  eager: true,
+const imageLoaders = import.meta.glob("@/assets/images/mutfak/webp/*.webp", {
+  eager: false,
   import: "default",
 });
 
@@ -19,8 +19,7 @@ export const mutfakAtolyesi: CardData = {
   title: "Mutfak Atölyesi",
   description: "Minik aşçılar için eğlenceli ve sağlıklı tarifler.",
   logo: cookingIcon,
-
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
     <p>Minik aşçılar için eğlenceli ve sağlıklı tarifler.</p>
     <p>Minik eller karıştırıyor, doğa mutfağa giriyor!</p>

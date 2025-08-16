@@ -9,17 +9,20 @@ import type { CardData } from "../../../types/types";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/geleneksel/webp/*.webp", {
-  eager: true,
-  import: "default",
-});
+const imageLoaders = import.meta.glob(
+  "@/assets/images/geleneksel/webp/*.webp",
+  {
+    eager: false,
+    import: "default",
+  },
+);
 
 export const gelenekselSokakOyunlariAtolyesi: CardData = {
   id: 11, // uygun ID ver
   title: "Geleneksel Sokak Oyunları Atölyesi",
   description: "Toprakla şekil ver, ellerinle hayalini yoğur.",
   logo: gelenekselLogo,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
     <p>Asfaltsız sokaklarda, ormanda mutluluğun peşindeyiz!</p>
     <p>

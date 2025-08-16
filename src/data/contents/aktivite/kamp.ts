@@ -9,8 +9,8 @@ import type { CardData } from "../../../types/types";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/kamp/webp/*.webp", {
-  eager: true,
+const imageLoaders = import.meta.glob("@/assets/images/kamp/webp/*.webp", {
+  eager: false,
   import: "default",
 });
 
@@ -19,7 +19,7 @@ export const kampVeCadirAtolyesi: CardData = {
   title: "Kamp ve Çadır Atölyesi",
   description: "Doğada kamp kur, ekip ol ve birlikte yaşamayı öğren.",
   logo: campingIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
   
     <p>Doğada kamp kur, ekip ol ve birlikte yaşamayı öğren.</p>

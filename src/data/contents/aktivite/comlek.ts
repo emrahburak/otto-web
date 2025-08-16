@@ -9,8 +9,8 @@ import type { CardData } from "../../../types/types";
 //   },
 // );
 
-const images = import.meta.glob("@/assets/images/comlek/webp/*.webp", {
-  eager: true,
+const imageLoaders = import.meta.glob("@/assets/images/comlek/webp/*.webp", {
+  eager: false,
   import: "default",
 });
 
@@ -19,7 +19,7 @@ export const comlekAtolyesi: CardData = {
   title: "Çömlek Atölyesi",
   description: "Toprakla şekil ver, ellerinle hayalini yoğur.",
   logo: potteryIcon,
-  images: Object.values(images) as string[],
+  images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
     <p>Toprakla şekil ver, ellerinle hayalini yoğur.</p>
     <p>Toprak avuçta döner, şekil alır... Sabırla, sevgiyle bir sanat doğar!</p>
