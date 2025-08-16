@@ -68,10 +68,20 @@ const EXTENSIONS = [".jpg", ".jpeg", ".png", ".JPG"];
       path.relative(process.cwd(), outputPath),
     );
 
+    // normal web
     await sharp(file)
       .rotate() // EXIF orientation'a göre düzeltir
       .webp({ quality: 75 })
       .toFile(outputPath);
+
+    // Mobil WebP
+    const smallBaseName = baseName.replace(".webp", "-sm.webp");
+    const smallOutputPath = path.join(outputDir, smallBaseName);
+    await sharp(file)
+      .rotate()
+      .resize({ width: 400 })
+      .webp({ quality: 60 })
+      .toFile(smallOutputPath);
   }
 
   console.log("🎉 Optimize işlemi tamamlandı (EXIF düzeltme dahil).");
