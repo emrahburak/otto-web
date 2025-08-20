@@ -46,7 +46,7 @@ export default function ServiceDetailPage() {
   }
 
   return (
-    <div>
+    <div className="space-y-8">
       <BreadCrumb
         items={[
           { label: "Anasayfa", href: "/" },
@@ -54,8 +54,8 @@ export default function ServiceDetailPage() {
         ]}
       />
 
-      <div className="w-full max-w-6xl mx-auto py-10 space-y-8 px-4">
-        <h1 className="text-3xl font-bold mb-6 text-center">{service.title}</h1>
+      <div className="w-full max-w-6xl mx-auto space-y-8 px-4">
+        <h1 className="text-3xl font-bold  text-center font-display">{service.title}</h1>
 
         <div className="w-full">
           {loadedImages.length > 0 ? (

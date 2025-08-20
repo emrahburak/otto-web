@@ -33,7 +33,8 @@ export default function ContactPage() {
 
 
   return (
-    <div>
+
+    <div className="space-y-8">
       <BreadCrumb
         items={[
           { label: "Anasayfa", href: "/" },
