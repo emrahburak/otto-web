@@ -13,6 +13,12 @@ export const footerItems: FooterLinkGroup[] = [
     links: [
       { id: 5, name: "Hakkımızda", link: "/about" },
       { id: 7, name: "İletişim", link: "/contact" },
+      {
+        id: 8,
+        name: "Gizlilik Politikası",
+        link: "/page/terms",
+        slug: "terms",
+      },
     ],
   },
 ];

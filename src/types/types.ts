@@ -69,3 +69,11 @@ export interface FooterLinkGroup {
   title: string;
   links: FooterLink[];
 }
+
+export interface PageData {
+  id: number;
+  slug: string;
+  title: string;
+  description: string;
+  content: string;
+}
