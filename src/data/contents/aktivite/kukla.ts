@@ -22,16 +22,21 @@ export const kuklaAtolyesi: CardData = {
   images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
 
   content: `
-    <p>Kendi kuklanı yap, ona hayat ver ve sahneye taşı.</p>
-    <p>Bir ip, bir çorap, biraz hayal gücü… Ve sahne hazır!</p>
-    <p>Kukla Atölyesi'nde çocuklar hem üretiyor, hem oynuyor, hem de anlatıyor. Kendi kuklalarını tasarlayan minikler, karakterlerine ses veriyor.</p>
-    <p>Bu atölyede çocuklar:</p>
-    <ul>
-      <li>Doğadan ve geri dönüştürülebilir malzemelerle kuklalar yapar,</li>
-      <li>Kukla oynatmayı, ses ve mimiklerle karakter yaratmayı öğrenir,</li>
-      <li>Hikâye kurma ve anlatma becerilerini geliştirir,</li>
-      <li>Kendini ifade ederken özgüven ve yaratıcılık kazanır.</li>
-    </ul>
-    <p><em>Not: Yapılan kuklalar katılımcılarda kalır.</em></p>
+  <p>
+  Otto Doğa Okulu Kukla Atölyesi, çocukların oyun ve doğaçlama yoluyla kendilerini özgürce ifade
+edebilecekleri eğlenceli bir deneyim sunar. Atölye, çocukların izlediği <strong>mini bir kukla gösterisi</strong> ile
+başlar; bu gösteri, hayal gücünü harekete geçirir ve sahneyle güvenli bir bağ kurmalarını sağla
+  </p>
+  <p>
+  Ardından çocuklar kendi kuklalarını tasarlar ve ikişerli gruplar halinde, bir moderatör eşliğinde
+sahneye çıkarak <strong>doğaçlama drama çalışmaları</strong> yapar. Bu süreçte çocuklar, düşüncelerini ve
+duygularını eğlenerek ifade eder; birlikte üretmenin ve sahnede olmanın keyfini yaşar.
+  </p>
+<p>
+Atölyenin temel kazanımı, çocuğun kendini rahatça ifade edebilmesi ve bunu yaparken
+eğlenmesidir. Kukla Atölyesi ürünlü bir atölyedir; her çocuk, finalde kendi tasarladığı kuklayla
+birlikte evine döner.
+</p>
+
   `.trim(),
 };

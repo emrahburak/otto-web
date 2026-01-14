@@ -180,4 +180,30 @@ psd
 thumb
 sketch
 
+# Sadece Atölye Klasörlerindeki Orijinal Görselleri Engelle
+src/assets/images/ahsap/*.{jpg,JPG,jpeg,png}
+src/assets/images/anaokulu-yillik/*.{jpg,JPG,jpeg,png}
+src/assets/images/ara-tatil/*.{jpg,JPG,jpeg,png}
+src/assets/images/binicilik/*.{jpg,JPG,jpeg,png}
+src/assets/images/ciftci/*.{jpg,JPG,jpeg,png}
+src/assets/images/cocuk-oyunu/*.{jpg,JPG,jpeg,png}
+src/assets/images/comlek/*.{jpg,JPG,jpeg,png}
+src/assets/images/dogum-gunu/*.{jpg,JPG,jpeg,png}
+src/assets/images/drama/*.{jpg,JPG,jpeg,png}
+src/assets/images/ebru/*.{jpg,JPG,jpeg,png}
+src/assets/images/geleneksel/*.{jpg,JPG,jpeg,png}
+src/assets/images/kamp/*.{jpg,JPG,jpeg,png}
+src/assets/images/kukla/*.{jpg,JPG,jpeg,png}
+src/assets/images/mutfak/*.{jpg,JPG,jpeg,png}
+src/assets/images/okul-etkinlik/*.{jpg,JPG,jpeg,png}
+src/assets/images/okul-gezisi/*.{jpg,JPG,jpeg,png}
+src/assets/images/sirket/*.{jpg,JPG,jpeg,png}
+src/assets/images/spor-atis/*.{jpg,JPG,jpeg,png}
+src/assets/images/yaz-okulu/*.{jpg,JPG,jpeg,png}
+src/assets/images/zipline-survivor/*.{jpg,JPG,jpeg,png}
+
+# WebP dosyalarını ve diğer genel görselleri koru
+!src/assets/images/**/webp/*.webp
+
 # End of https://www.toptal.com/developers/gitignore/api/react,node
+

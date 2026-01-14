@@ -21,16 +21,19 @@ export const comlekAtolyesi: CardData = {
   logo: potteryIcon,
   images: Object.values(imageLoaders) as (() => Promise<string>)[], // string[] yerine
   content: `
-    <p>Toprakla şekil ver, ellerinle hayalini yoğur.</p>
-    <p>Toprak avuçta döner, şekil alır... Sabırla, sevgiyle bir sanat doğar!</p>
-    <p>Çömlek Atölyesi’nde çocuklar çamura ellerini sokar, hissetmeyi, şekil vermeyi ve beklemeyi öğrenir. Bu atölye sadece bir sanat çalışması değil; aynı zamanda toprakla kurulmuş derin bir bağdır.</p>
-    <p>Atölyede çocuklar:</p>
-    <ul>
-      <li>Çamura dokunur, yoğurur, döndürür,</li>
-      <li>Kendi tabaklarını, minik heykellerini yapar,</li>
-      <li>Kurutma süreçlerini gözlemler,</li>
-      <li>Sabır, el-göz koordinasyonu ve yaratıcılıklarını geliştirir.</li>
-    </ul>
-    <p><strong>Not:</strong> Torna da yapılan ürünler katılımcılarda kalır.</p>
+  <p>
+  Otto Doğa Okulu’nda okul içi çömlek atölyeleri, çocukların toprağa dokunarak üretim sürecini
+deneyimlediği uygulamalı etkinliklerdir. Atölye süreci, çocukların önce <strong>elle şekillendirme</strong>
+çalışmalarıyla başlar; ardından çocuklar, <strong>torna başında profesyonel üretim sürecini deneyimler</strong>.
+  </p>
+<p>
+Her çocuk, atölye boyunca birebir yönlendirilir ve kendi ürününü oluşturur. Üretilen çömlekler,
+çocuklara ait özel kutularda saklanır ve süreç tamamlandıktan sonra <strong>boyama çalışmaları</strong> yapılır.
+Atölye sonunda her çocuk, kendi emeğiyle ortaya çıkardığı ürünü evine götürür.
+</p>
+<p>
+Bu atölye, çocukların el becerilerini, dikkatini ve üretme motivasyonunu desteklerken; süreci
+keyifli, öğretici ve kalıcı bir deneyime dönüştürmeyi amaçlar.
+</p>
   `.trim(),
 };
