@@ -13,6 +13,12 @@ import { yazOkulu } from "./contents/aktivite/yaz-okulu";
 import { cocukOyunu } from "./contents/aktivite/cocuk-oyunu";
 import { okulGezisi } from "./contents/aktivite/okul-gezisi";
 import { ebruAtolyesi } from "./contents/aktivite/ebru";
+import { ahsapAtolyesi } from "./contents/aktivite/ahsap";
+import { anaokuluYillik } from "./contents/aktivite/anaokullari-yillik";
+import { araTatilProgrami } from "./contents/aktivite/ara-tatil";
+import { dogumGunu } from "./contents/aktivite/dogum-gunu";
+import { okulEtkinlik } from "./contents/aktivite/okul-etkinlik";
+import { sirketMotivasyon } from "./contents/aktivite/sirket-motivasyon";
 
 export const workshops: CardData[] = [
   okulGezisi,
@@ -29,4 +35,10 @@ export const workshops: CardData[] = [
   dramaAtolyesi,
   ebruAtolyesi,
   cocukOyunu,
+  ahsapAtolyesi,
+  anaokuluYillik,
+  araTatilProgrami,
+  dogumGunu,
+  okulEtkinlik,
+  sirketMotivasyon,
 ];
