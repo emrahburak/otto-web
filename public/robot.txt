@@ -1,0 +1,14 @@
+# Otto Doğa Okulu - Robots.txt
+User-agent: *
+Allow: /
+
+# İstemediğimiz sistem dosyalarını gizleyelim
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /private/
+
+# Tarama hızını optimize et
+Crawl-delay: 1
+
+# Sitemap adresini mutlaka ekle (SEO için kritik)
+Sitemap: https://www.ottodogaokulu.com/sitemap.xml
