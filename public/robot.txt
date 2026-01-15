@@ -6,6 +6,7 @@ Allow: /
 Disallow: /cgi-bin/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /sayfa/gizlilik
 
 # Tarama hızını optimize et
 Crawl-delay: 1

@@ -4,20 +4,20 @@ export const footerItems: FooterLinkGroup[] = [
   {
     title: "Aktiviteler",
     links: [
-      { id: 4, name: "Tüm Aktiviteler", link: "/activites" },
+      { id: 4, name: "Tüm Aktiviteler", link: "/aktiviteler" },
       // tekil route'lar dinamik olacaksa burada yer verilmeyebilir
     ],
   },
   {
     title: "Kurumsal",
     links: [
-      { id: 5, name: "Hakkımızda", link: "/about" },
-      { id: 7, name: "İletişim", link: "/contact" },
+      { id: 5, name: "Hakkımızda", link: "/hakkimizda" },
+      { id: 7, name: "İletişim", link: "/iletisim" },
       {
         id: 8,
         name: "Gizlilik Politikası",
-        link: "/page/terms",
-        slug: "terms",
+        link: "/sayfa/gizlilik",
+        slug: "gizlilik",
       },
     ],
   },

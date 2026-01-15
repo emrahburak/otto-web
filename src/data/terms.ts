@@ -2,7 +2,7 @@ import type { PageData } from "../types/types";
 
 export const gizlilikPolitikasi: PageData = {
   id: 1,
-  slug: "terms",
+  slug: "gizlilik",
   title: "Gizlilik Politikası ve KVKK Aydınlatma Metni",
   description: "Otto Doğa Okulu’nun kişisel verilerin korunması politikası.",
   content: `
@@ -73,7 +73,7 @@ Site SSL protokolüyle yayınlanır.</p>
 <br/>
 <h3>7. Güncellemeler</h3>
 <p>Bu metin yasal veya teknolojik gelişmelere göre güncellenebilir. 
-Güncel sürüm her zaman <a href="/page/gizlilik-politikasi">ottodogaokulu.com/gizlilik-politikasi</a> adresinde yayımlanır.</p>
+Güncel sürüm her zaman <a href="/sayfa/gizlilik">ottodogaokulu.com/sayfa/gizlilik</a> adresinde yayımlanır.</p>
 
 <br/>
 <p>© 2025 Otto Doğa Okulu – Tüm Hakları Saklıdır.<br/>

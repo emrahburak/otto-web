@@ -2,22 +2,24 @@ import { useParams } from "react-router-dom";
 import BreadCrumb from "../../components/BreadCrumb";
 import { footerItems } from "../../data/footerData";
 import { pageData } from "../../data/pageData";
+import { sayfaBulunamadi } from "../../data/404";
 
 const allFooterLinks = footerItems.flatMap(group => group.links);
 
 export default function PageDetailPage() {
   const { slug } = useParams<{ slug: string }>();
 
-  const pageLink = allFooterLinks.find(link => {
+  // 1. Footer linkleri veya pageData içinde ara
+  const foundLink = allFooterLinks.find(link => {
     const linkSlug = link.slug ?? link.link?.split("/").filter(Boolean).pop();
     return linkSlug === slug;
   });
 
-  const content = pageData.find(p => p.slug === slug);
+  const foundContent = pageData.find(p => p.slug === slug);
 
-  if (!pageLink) {
-    return <div>Sayfa bulunamadı.</div>;
-  }
+  // 2. Eğer URL hatalıysa veya içerik yoksa yedekleri (fallback) devreye sok
+  const pageLink = foundLink || { id: 404, name: "Sayfa Bulunamadı" };
+  const content = foundContent || sayfaBulunamadi;
 
   return (
     <div>
@@ -28,22 +30,15 @@ export default function PageDetailPage() {
         ]}
       />
 
-      <div className="w-full max-w-6xl mx-auto py-10 px-4  space-y-7">
-        {content ? (
-          <>
-            <h2 className="text-2xl font-semibold  font-display text-center">
-              {content.title}
-            </h2>
-            <div
-              className="prose prose-lg mx-auto"
-              dangerouslySetInnerHTML={{ __html: content.content }}
-            />
-          </>
-        ) : (
-          <p>Bu sayfanın içeriği henüz eklenmedi.</p>
-        )}
+      <div className="w-full max-w-6xl mx-auto py-10 px-4 space-y-7">
+        <h2 className="text-2xl font-semibold font-display text-center">
+          {content.title}
+        </h2>
+        <div
+          className="prose prose-lg mx-auto"
+          dangerouslySetInnerHTML={{ __html: content.content }}
+        />
       </div>
     </div>
   );
 }
-

@@ -14,7 +14,7 @@ export default function ActiviteField({ cards }: ActiviteProps) {
       {cards.map((card, idx) => (
         <div key={idx} className="w-full sm:max-w-none md:max-w-none lg:max-w-[296px] h-full min-h-[384px]"
         >
-          <Card items={card} variant="activite" />
+          <Card items={card} variant="activite" isCarousel={false} />
         </div>
       ))}
     </>

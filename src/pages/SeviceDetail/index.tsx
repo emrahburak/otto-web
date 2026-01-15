@@ -50,6 +50,7 @@ export default function ServiceDetailPage() {
       <BreadCrumb
         items={[
           { label: "Anasayfa", href: "/" },
+          { label: "Aktiviteler", href: "/aktiviteler" },
           { label: service.title ?? "" },
         ]}
       />

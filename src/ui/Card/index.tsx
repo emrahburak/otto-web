@@ -14,19 +14,22 @@ const socialIcon = {
 }
 
 interface CardProps {
-  items: CardData
-  variant: string
+  items: CardData;
+  variant: string;
+  isCarousel: boolean;
 }
 
-export default function Card({ items, variant }: CardProps) {
+export default function Card({ items, variant, isCarousel = false }: CardProps) {
   const { title, description, user } = items;
 
+  const isActivite = variant === "default" || variant === "activite";
+  const cursorClass = isCarousel ? "cursor-grab" : "cursor-pointer"; // Carousel değilse standart tıklama ikonu
 
   return (
     <div className={`
       group 
-          ${variant === "default" || variant === "activite" ? " relative pb-6 cursor-grab h-full w-full" : ""}
-          ${variant === "team" ? "w-[340px] h-[360px] relative overflow-hidden cursor-pointer" : ""}
+      ${isActivite ? `relative pb-6 h-full w-full ${cursorClass}` : ""}
+      ${variant === "team" ? "w-[340px] h-[360px] relative overflow-hidden cursor-pointer" : ""}
       `}>
       <div className={`
   ${variant === "default" || variant === "activite" ? "shadow-md p-7 flex flex-col gap-5 text-gray-02 w-full h-full" : ""}

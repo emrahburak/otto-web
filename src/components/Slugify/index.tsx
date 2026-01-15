@@ -13,6 +13,6 @@ export function Slugify({ title, disable, children }: SlugifyProps) {
   if (disable) return <>{children}</>;
   const slug = slugify(title ?? "", { lower: true, locale: "tr" }) || ""
 
-  return <Link to={`/services/${slug}`}>{children}</Link>
+  return <Link to={`/aktiviteler/${slug}`}>{children}</Link>
 }
 
