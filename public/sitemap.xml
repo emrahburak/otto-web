@@ -2,113 +2,131 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.ottodogaokulu.com/</loc>
-    <lastmod>2025-11-21</lastmod>
+    <lastmod>2026-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://www.ottodogaokulu.com/about</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/hakkimizda</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/activites</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/iletisim</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/contact</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.ottodogaokulu.com/aktiviteler</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Services -->
   <url>
-    <loc>https://www.ottodogaokulu.com/services/okul-gezisi</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/okul-gezisi</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/yaz-okulu</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/yaz-okulu</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/binicilik-atolyesi</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/binicilik-atolyesi</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/ciftci-cocuk-atolyesi</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/ciftci-cocuk-atolyesi</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/comlek-atolyesi</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/comlek-atolyesi</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/kamp-ve-cadir-atolyesi</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/kamp-ve-cadir-atolyesi</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/kukla-atolyesi</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/kukla-atolyesi</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/mutfak-atolyesi</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/mutfak-atolyesi</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/geleneksel-sokak-oyunlari-atolyesi</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/geleneksel-sokak-oyunlari-atolyesi</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/futbol-voleybol-ve-atis-oyunlari</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/futbol-voleybol-ve-atis-oyunlari</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/zipline-and-survivor-parkuru</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/zipline-and-survivor-parkuru</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/drama-egitimi</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/drama-egitimi</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/ebru-atolyesi</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/ebru-atolyesi</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ottodogaokulu.com/services/cocuk-oyunu</loc>
-    <lastmod>2025-11-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/cocuk-oyunu</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/ahsap-atolyesi</loc>
+    <lastmod>2026-01-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/anaokullari-ile-yillik-anlasma</loc>
+    <lastmod>2026-01-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/ara-tatil-programi</loc>
+    <lastmod>2026-01-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/dogum-gunu-organizasyonlari</loc>
+    <lastmod>2026-01-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/okul-ici-etkinlik</loc>
+    <lastmod>2026-01-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ottodogaokulu.com/aktiviteler/sirket-motivasyon-etkinligi</loc>
+    <lastmod>2026-01-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+  <loc>https://www.ottodogaokulu.com/sayfa/gizlilik</loc>
+  <lastmod>2026-01-15</lastmod>
+  <priority>0.5</priority>
+</url>
 </urlset>
-

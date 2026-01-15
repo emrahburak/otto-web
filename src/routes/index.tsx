@@ -14,13 +14,21 @@ export const appRoutes: RouteObject[] = [
     element: <Layout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "about", element: <About /> },
-      { path: "contact", element: <Contact /> },
-      { path: "activites", element: <ActivitesPage /> },
-      { path: "services/:slug", element: <ServiceDetailPage /> },
-      { path: "page/:slug", element: <PageDetailPage /> },
-
+      // "about" yerine daha samimi ve Türkçe "hakkimizda"
+      { path: "hakkimizda", element: <About /> },
+      // "contact" yerine doğrudan "iletisim"
+      { path: "iletisim", element: <Contact /> },
+      // "activites" (hatalıydı) yerine SEO gücü yüksek "aktiviteler"
+      { path: "aktiviteler", element: <ActivitesPage /> },
+      // "services" yerine daha kurumsal ve SEO dostu "programlar" veya "aktivite"
+      { path: "aktiviteler/:slug", element: <ServiceDetailPage /> },
+      // Genel sayfalar (kvkk, kurallar vb.) için "bilgi" veya "sayfa"
+      { path: "sayfa/:slug", element: <PageDetailPage /> },
+      // 1. Seçenek: Doğrudan 404 içeriğini göster (Daha iyi SEO)
+      {
+        path: "*",
+        element: <PageDetailPage />
+      },
     ],
   },
 ];
-

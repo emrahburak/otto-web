@@ -56,13 +56,13 @@ export default function Carousel({ cards }: CarouselProps) {
           {cards.map((card, idx) => (
             <SwiperSlide key={idx} className='flex justify-center ' style={{ overflow: "visible" }} >
               <div className='w-full max-w-[296px]  h-full min-h-[384px] mx-auto'>
-                <Card items={card} variant='default' />
+                <Card items={card} variant='default' isCarousel={true} />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <Link to={"/activites"} className="font-display font-semibold text-white py-2 px-6 bg-green-01 w-fit mx-auto rounded-full leading-normal hover:bg-orange-01">
+        <Link to={"/aktiviteler"} className="font-display font-semibold text-white py-2 px-6 bg-green-01 w-fit mx-auto rounded-full leading-normal hover:bg-orange-01">
           AKTİVİTELER
         </Link>
 
