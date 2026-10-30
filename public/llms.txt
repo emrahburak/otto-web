@@ -11,37 +11,37 @@
 
 ## Key routes (canonical)
 
-- Ana Sayfa: https://www.ottodogaokulu.com/
-- Hakkımızda: https://www.ottodogaokulu.com/hakkimizda
-- İletişim: https://www.ottodogaokulu.com/iletisim
-- Aktiviteler: https://www.ottodogaokulu.com/aktiviteler
-- Aktivite detayı: https://www.ottodogaokulu.com/aktiviteler/:slug
-- Bilgi sayfası: https://www.ottodogaokulu.com/sayfa/:slug
-- Gizlilik Politikası: https://www.ottodogaokulu.com/sayfa/gizlilik
+- [Ana Sayfa](https://www.ottodogaokulu.com/)
+- [Hakkımızda](https://www.ottodogaokulu.com/hakkimizda)
+- [İletişim](https://www.ottodogaokulu.com/iletisim)
+- [Aktiviteler](https://www.ottodogaokulu.com/aktiviteler)
+- [Aktivite detayı](https://www.ottodogaokulu.com/aktiviteler/:slug)
+- [Bilgi sayfası](https://www.ottodogaokulu.com/sayfa/:slug)
+- [Gizlilik Politikası](https://www.ottodogaokulu.com/sayfa/gizlilik)
 
 ## Activities
 
-- Okul Gezisi: /aktiviteler/okul-gezisi
-- Yaz Okulu: /aktiviteler/yaz-okulu
-- Binicilik Atölyesi: /aktiviteler/binicilik-atolyesi
-- Çiftçi Çocuk Atölyesi: /aktiviteler/ciftci-cocuk-atolyesi
-- Çömlek Atölyesi: /aktiviteler/comlek-atolyesi
-- Kamp ve Çadır Atölyesi: /aktiviteler/kamp-ve-cadir-atolyesi
-- Kukla Atölyesi: /aktiviteler/kukla-atolyesi
-- Mutfak Atölyesi: /aktiviteler/mutfak-atolyesi
-- Geleneksel Sokak Oyunları: /aktiviteler/geleneksel-sokak-oyunlari-atolyesi
-- Futbol, Voleybol ve Atış Oyunları: /aktiviteler/futbol-voleybol-ve-atis-oyunlari
-- Zipline ve Survivor Parkuru: /aktiviteler/zipline-and-survivor-parkuru
-- Drama Eğitimi: /aktiviteler/drama-egitimi
-- Ebru Atölyesi: /aktiviteler/ebru-atolyesi
-- Çocuk Oyunu: /aktiviteler/cocuk-oyunu
-- Ahşap Atölyesi: /aktiviteler/ahsap-atolyesi
-- Anaokulları ile Yıllık Anlaşma: /aktiviteler/anaokullari-ile-yillik-anlasma
-- Ara Tatil Programı: /aktiviteler/ara-tatil-programi
-- Doğum Günü Organizasyonları: /aktiviteler/dogum-gunu-organizasyonlari
-- Okul İçi Etkinlik: /aktiviteler/okul-ici-etkinlik
-- Şirket Motivasyon Etkinliği: /aktiviteler/sirket-motivasyon-etkinligi
-- Tüm liste: /aktiviteler
+- [Okul Gezisi](https://www.ottodogaokulu.com/aktiviteler/okul-gezisi)
+- [Yaz Okulu](https://www.ottodogaokulu.com/aktiviteler/yaz-okulu)
+- [Binicilik Atölyesi](https://www.ottodogaokulu.com/aktiviteler/binicilik-atolyesi)
+- [Çiftçi Çocuk Atölyesi](https://www.ottodogaokulu.com/aktiviteler/ciftci-cocuk-atolyesi)
+- [Çömlek Atölyesi](https://www.ottodogaokulu.com/aktiviteler/comlek-atolyesi)
+- [Kamp ve Çadır Atölyesi](https://www.ottodogaokulu.com/aktiviteler/kamp-ve-cadir-atolyesi)
+- [Kukla Atölyesi](https://www.ottodogaokulu.com/aktiviteler/kukla-atolyesi)
+- [Mutfak Atölyesi](https://www.ottodogaokulu.com/aktiviteler/mutfak-atolyesi)
+- [Geleneksel Sokak Oyunları](https://www.ottodogaokulu.com/aktiviteler/geleneksel-sokak-oyunlari-atolyesi)
+- [Futbol, Voleybol ve Atış Oyunları](https://www.ottodogaokulu.com/aktiviteler/futbol-voleybol-ve-atis-oyunlari)
+- [Zipline ve Survivor Parkuru](https://www.ottodogaokulu.com/aktiviteler/zipline-and-survivor-parkuru)
+- [Drama Eğitimi](https://www.ottodogaokulu.com/aktiviteler/drama-egitimi)
+- [Ebru Atölyesi](https://www.ottodogaokulu.com/aktiviteler/ebru-atolyesi)
+- [Çocuk Oyunu](https://www.ottodogaokulu.com/aktiviteler/cocuk-oyunu)
+- [Ahşap Atölyesi](https://www.ottodogaokulu.com/aktiviteler/ahsap-atolyesi)
+- [Anaokulları ile Yıllık Anlaşma](https://www.ottodogaokulu.com/aktiviteler/anaokullari-ile-yillik-anlasma)
+- [Ara Tatil Programı](https://www.ottodogaokulu.com/aktiviteler/ara-tatil-programi)
+- [Doğum Günü Organizasyonları](https://www.ottodogaokulu.com/aktiviteler/dogum-gunu-organizasyonlari)
+- [Okul İçi Etkinlik](https://www.ottodogaokulu.com/aktiviteler/okul-ici-etkinlik)
+- [Şirket Motivasyon Etkinliği](https://www.ottodogaokulu.com/aktiviteler/sirket-motivasyon-etkinligi)
+- [Tüm liste](https://www.ottodogaokulu.com/aktiviteler)
 
 ## About
 
@@ -53,12 +53,12 @@
 
 - Telefon: 05010144386
 - E-posta: info@ottodogapark.com
-- İletişim sayfası: /iletisim
-- Instagram: https://www.instagram.com/ottodogaokulu/
+- [İletişim sayfası](https://www.ottodogaokulu.com/iletisim)
+- [Instagram](https://www.instagram.com/ottodogaokulu/)
 
 ## Machine-readable sources
 
-- Sitemap: https://www.ottodogaokulu.com/sitemap.xml
-- Robots: https://www.ottodogaokulu.com/robots.txt
+- [Sitemap](https://www.ottodogaokulu.com/sitemap.xml)
+- [Robots](https://www.ottodogaokulu.com/robots.txt)
 - Markdown: herkese açık sayfalar `Accept: text/markdown` ile Markdown döner (`Vary: Accept`).
 - Open Graph ve canonical her rotada gömülüdür; `og:image` varsayılanı `/og-image.jpeg` yoludur.
