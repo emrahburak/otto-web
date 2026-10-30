@@ -4,8 +4,26 @@ import tailwindcss from "@tailwindcss/vite";
 import { ViteImageOptimizer as imageOptimizer } from "vite-plugin-image-optimizer";
 
 import path from "path";
+import { writePrerenderedHtml } from "./src/lib/prerender/writer";
 
 const isProduction = process.env.NODE_ENV === "production";
+
+function prerenderPlugin() {
+  return {
+    name: "prerender-routes",
+    closeBundle: {
+      sequential: true,
+      order: "post" as const,
+      async handler() {
+        if (process.env.SKIP_PRERENDER === "true") {
+          return;
+        }
+        await writePrerenderedHtml();
+      },
+    },
+  };
+}
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -19,6 +37,7 @@ export default defineConfig({
       avif: { quality: 50 },
       svg: {},
     }),
+    prerenderPlugin(),
   ],
   server: {
     host: true,

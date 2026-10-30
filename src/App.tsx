@@ -1,6 +1,7 @@
 import { BrowserRouter, useRoutes } from "react-router-dom";
 import { appRoutes } from "./routes";
-appRoutes
+
+void appRoutes;
 
 function AppRoutes() {
   return useRoutes(appRoutes)
@@ -12,7 +13,7 @@ function App() {
   return (
     <>
       <BrowserRouter
-        // @ts-ignore
+        // @ts-expect-error BrowserRouter extra prop for scroll restoration
         scrollRestoration="manual"
       >
         <AppRoutes />

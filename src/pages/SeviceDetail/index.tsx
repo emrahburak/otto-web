@@ -7,7 +7,8 @@ import { useEffect, useRef, useState } from "react";
 import { Fancybox as NativeFancybox } from "@fancyapps/ui/dist/fancybox/";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-import "./style.css"
+import { useSeo } from "../../lib/useSeo";
+import "./style.css";
 
 
 export default function ServiceDetailPage() {
@@ -16,6 +17,12 @@ export default function ServiceDetailPage() {
   const service = workshops.find(item => {
     const itemSlug = slugify(item.title ?? "", { lower: true, locale: "tr" });
     return itemSlug === slug;
+  });
+
+  useSeo({
+    title: `${service?.title ?? "Aktivite"} – Otto Doğa Okulu`,
+    description: service?.description ?? "Otto Doğa Okulu etkinlik detayları.",
+    ogType: "article",
   });
 
   const galleryRef = useRef<HTMLDivElement | null>(null);

@@ -29,7 +29,9 @@ const LocationField: React.FC<LocationFieldProps> = ({ mapUrl }) => {
 
   const getPlatformMapLink = () => {
     const userAgent = navigator.userAgent || navigator.vendor || "";
-    const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream;
+    const isIOS =
+      /iPad|iPhone|iPod/.test(userAgent) &&
+      !("MSStream" in window && typeof window.MSStream !== "undefined");
     const isAndroid = /android/i.test(userAgent);
 
     if (isIOS) {

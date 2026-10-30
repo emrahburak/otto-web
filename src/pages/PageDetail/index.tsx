@@ -3,6 +3,7 @@ import BreadCrumb from "../../components/BreadCrumb";
 import { footerItems } from "../../data/footerData";
 import { pageData } from "../../data/pageData";
 import { sayfaBulunamadi } from "../../data/404";
+import { useSeo } from "../../lib/useSeo";
 
 const allFooterLinks = footerItems.flatMap(group => group.links);
 
@@ -20,6 +21,12 @@ export default function PageDetailPage() {
   // 2. Eğer URL hatalıysa veya içerik yoksa yedekleri (fallback) devreye sok
   const pageLink = foundLink || { id: 404, name: "Sayfa Bulunamadı" };
   const content = foundContent || sayfaBulunamadi;
+
+  useSeo({
+    title: `${content.title} – Otto Doğa Okulu`,
+    description: content.description,
+    ogType: "website",
+  });
 
   return (
     <div>
