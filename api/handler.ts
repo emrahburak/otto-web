@@ -179,9 +179,12 @@ export function createRouteHandler(
         }
 
         const originResponse = await fetchIndexHtml(request);
+        const headers = withVaryAccept(originResponse.headers);
+        headers.delete("content-encoding");
+        headers.delete("content-length");
         return new Response(originResponse.body, {
           status: 200,
-          headers: withVaryAccept(originResponse.headers),
+          headers,
         });
       }
 
@@ -196,9 +199,12 @@ export function createRouteHandler(
       }
 
       const originResponse = await fetchIndexHtml(request);
+      const headers = withVaryAccept(originResponse.headers);
+      headers.delete("content-encoding");
+      headers.delete("content-length");
       return new Response(originResponse.body, {
         status: 404,
-        headers: withVaryAccept(originResponse.headers),
+        headers,
       });
     } catch {
       return new Response("Internal Server Error", {
@@ -221,14 +227,14 @@ async function fetchRouteHtml(request: Request): Promise<Response> {
   const url = new URL(request.url);
   const routeHtmlUrl = new URL(htmlUrlForPath(url.pathname), request.url);
   try {
-    const routeResponse = await fetch(routeHtmlUrl);
+    const routeResponse = await fetch(routeHtmlUrl, { headers: { "Accept-Encoding": "identity" } });
     if (routeResponse.ok) {
       return routeResponse;
     }
   } catch {
     // Fall through to the SPA shell.
   }
-  return fetch(new URL("/index.html", request.url));
+  return fetch(new URL("/index.html", request.url), { headers: { "Accept-Encoding": "identity" } });
 }
 
 export default {
