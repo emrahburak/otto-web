@@ -203,7 +203,7 @@ function renderContact(data: PrerenderData): RouteDefinition {
       ])}
       <section class="w-full max-w-6xl mx-auto py-5">
         <h1 class="text-center font-semibold font-display text-3xl">İLETİŞİME GEÇİN</h1>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-7 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-7 py-16">
           <div class="flex flex-col items-center justify-start gap-1">
             <p class="font-display text-2xl">Telefon</p>
             <a href="tel:${data.contact.phone}" class="font-display-02 text-gray-500 hover:text-orange-01 text-lg text-center">${data.contact.phone}</a>
@@ -211,6 +211,10 @@ function renderContact(data: PrerenderData): RouteDefinition {
           <div class="flex flex-col items-center justify-start gap-1">
             <p class="font-display text-2xl">Mail</p>
             <p class="font-display-02 text-gray-500 text-lg text-center">${data.contact.mail}</p>
+          </div>
+          <div class="flex flex-col items-center justify-start gap-1">
+            <p class="font-display text-2xl">Instagram</p>
+            <a href="https://www.instagram.com/ottodogaokulu/" target="_blank" rel="noopener noreferrer" class="font-display-02 text-gray-500 hover:text-orange-01 text-lg text-center">@ottodogaokulu</a>
           </div>
           <div class="flex flex-col items-center justify-start gap-1">
             <p class="font-display text-2xl">Adres</p>

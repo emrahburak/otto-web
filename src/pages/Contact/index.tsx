@@ -3,6 +3,7 @@ import BreadCrumb from "../../components/BreadCrumb";
 import LocationField from "../../components/LocationField";
 import { ContactData } from "../../data/contact";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { extractCoordinates, getPlatformMapLink } from "../../lib/mapUtil";
 import { Button } from "../../ui/Button";
 import { useSeo } from "../../lib/useSeo";
@@ -46,7 +47,7 @@ export default function ContactPage() {
         <h1 className="text-center font-semibold font-display text-3xl">İLETİŞİME GEÇİN</h1>
 
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-7 py-16">
 
           <div className="flex flex-col items-center justify-start gap-1">
             <a href={`tel:${contactData.phone}`} className="text-orange-01 text-4xl">
@@ -65,6 +66,17 @@ export default function ContactPage() {
               {contactData.mail}
             </p>
 
+          </div>
+
+
+          <div className="flex flex-col items-center justify-start gap-1">
+            <a href="https://www.instagram.com/ottodogaokulu/" target="_blank" rel="noopener noreferrer" className="text-orange-01 text-4xl">
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <p className="font-display text-2xl hover:text-orange-01 transition-all duration-300 ease-in-out">Instagram</p>
+            <p className="font-display-02 text-gray-500 hover:text-orange-01 text-lg text-center">
+              @ottodogaokulu
+            </p>
           </div>
 
           <div className="flex flex-col items-center justify-start gap-1">
