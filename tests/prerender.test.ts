@@ -160,7 +160,7 @@ describe("full page assembly", () => {
     const html = buildStaticPage(baseHtml, route);
 
     expect(html).toContain(`<title>${route.title}</title>`);
-    expect(html).toContain(`<div id="root"></div>`);
+    expect(html).toContain(`<div id="root">${route.content}</div>`);
     expect(html).toContain(`<meta name="description" content="${route.description}"`);
     expect(html).toContain(`<meta property="og:title" content="${route.title}"`);
     expect(html).toContain(`<meta property="og:url" content="https://www.ottodogaokulu.com/iletisim"`);
@@ -173,6 +173,8 @@ describe("full page assembly", () => {
     const route = getRouteDefinitions(data).find((r) => r.path === "/hakkimizda")!;
     const html = buildStaticPage(baseHtml, route);
 
-    expect(html).toContain('<div id="root"></div>');
+    expect(html).toContain('<div id="root">');
+    expect(html).toContain("</div>");
+    expect(html).toContain(route.content);
   });
 });
