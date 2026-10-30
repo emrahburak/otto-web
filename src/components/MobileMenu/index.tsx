@@ -8,7 +8,7 @@ import type { headLink } from "../../types/types";
 
 interface MobileMenuProps {
   menuItems: headLink[];
-  isOpen: Boolean;
+  isOpen: boolean;
   onClose: () => void;
 
 }

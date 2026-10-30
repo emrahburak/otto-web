@@ -20,7 +20,11 @@ export function extractCoordinates(
 
 export function getPlatformMapLink(lat: number, lng: number): string {
   const userAgent = navigator.userAgent || navigator.vendor || "";
-  const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !(window as any).MSStream;
+  const msStream =
+    "MSStream" in window
+      ? (window as unknown as Record<string, unknown>).MSStream
+      : undefined;
+  const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !msStream;
   const isAndroid = /android/i.test(userAgent);
 
   if (isIOS) {

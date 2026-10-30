@@ -7,6 +7,7 @@ import Contact from "../pages/Contact";
 import ActivitesPage from "../pages/Activites";
 import ServiceDetailPage from "../pages/SeviceDetail";
 import PageDetailPage from "../pages/PageDetail";
+import PrivacyPage from "../pages/Privacy";
 
 export const appRoutes: RouteObject[] = [
   {
@@ -24,6 +25,10 @@ export const appRoutes: RouteObject[] = [
       { path: "aktiviteler/:slug", element: <ServiceDetailPage /> },
       // Genel sayfalar (kvkk, kurallar vb.) için "bilgi" veya "sayfa"
       { path: "sayfa/:slug", element: <PageDetailPage /> },
+      // Trust anchors for agents (aliases, existing Turkish URLs stay primary)
+      { path: "about", element: <About /> },
+      { path: "contact", element: <Contact /> },
+      { path: "privacy", element: <PrivacyPage /> },
       // 1. Seçenek: Doğrudan 404 içeriğini göster (Daha iyi SEO)
       {
         path: "*",

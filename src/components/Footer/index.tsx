@@ -39,7 +39,7 @@ export const Footer = ({ footerItems }: FooterProps) => {
         {footerItems.map((group) => (
           <div key={group.title} className="flex flex-col gap-2">
             <h4 className="text-lg  text-gray-900 font-display ">{group.title}</h4>
-            {group.links.map((link: any) => (
+            {group.links.map((link: FooterLinkGroup["links"][number]) => (
               <Link key={link.id} to={link.link} className="text-gray-600 hover:text-gray-900 font-display-02 ">
                 {link.name}
               </Link>

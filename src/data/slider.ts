@@ -48,7 +48,7 @@ const descriptions = [
 
 // 3. Görselleri SlideContent'e dönüştür
 export const slides: SlideContent[] = Object.entries(imageImports).map(
-  ([_, img], index) => ({
+  ([, img], index) => ({
     id: `slide-${index + 1}`,
     img: img as string,
     banner: banners[Math.floor(Math.random() * banners.length)],

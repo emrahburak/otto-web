@@ -11,7 +11,8 @@ import { useSeo } from "../../lib/useSeo";
 export default function AboutPage() {
   useSeo({
     title: "Hakkımızda – Otto Doğa Okulu",
-    description: "İstanbul Pendik’teki Otto Doğa Okulu’nun doğayla iç içe, çocuklara özel eğitim programları ve uzman kadrosu hakkında bilgi alın."
+    description: "İstanbul Pendik’teki Otto Doğa Okulu’nun doğayla iç içe, çocuklara özel eğitim programları ve uzman kadrosu hakkında bilgi alın.",
+    ogType: "website",
   });
 
   return (

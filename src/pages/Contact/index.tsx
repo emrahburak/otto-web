@@ -13,7 +13,8 @@ export default function ContactPage() {
 
   useSeo({
     title: "İletişim – Otto Doğa Okulu",
-    description: "Otto Doğa Okulu ile iletişime geçin. Sorularınız, görüşleriniz ve kayıt işlemleri için bize ulaşabilirsiniz."
+    description: "Otto Doğa Okulu ile iletişime geçin. Sorularınız, görüşleriniz ve kayıt işlemleri için bize ulaşabilirsiniz.",
+    ogType: "website",
   });
 
   const contactData = ContactData

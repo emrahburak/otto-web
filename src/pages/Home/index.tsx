@@ -16,7 +16,8 @@ export default function HomePage() {
 
   useSeo({
     title: "Ana Sayfa – Otto Doğa Okulu",
-    description: "Çocuklar için doğa temelli öğrenme ve keşif olanakları sunan Otto Doğa Okulu’nun ana sayfası."
+    description: "Çocuklar için doğa temelli öğrenme ve keşif olanakları sunan Otto Doğa Okulu’nun ana sayfası.",
+    ogType: "website",
   });
 
   const slides = useMemo(() => shuffleArray(originalSlides),[])

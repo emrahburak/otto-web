@@ -3,16 +3,21 @@
 
 
 
-export const Button = (props: any) => {
-  const {
-    className = "",
-    style,
-    type = "button",
-    onClick, // ← Eksikti, ekliyoruz
-    children,
-    ...rest // opsiyonel: diğer prop’ları alabilsin diye
-  } = props;
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string;
+  children?: ReactNode;
+}
+
+export const Button = ({
+  className = "",
+  style,
+  type = "button",
+  onClick,
+  children,
+  ...rest
+}: ButtonProps) => {
   return (
     <button type={type}
       className={`transition-all duration-300 ease-in-out
@@ -23,7 +28,7 @@ export const Button = (props: any) => {
       {...rest}
     >
 
-      {props.children}
+      {children}
 
     </button>
   )
