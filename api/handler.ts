@@ -68,30 +68,31 @@ export function acceptsMediaType(request: Request, mediaType: string): boolean {
   });
 }
 
-function qualityForMediaType(ranges: AcceptRange[], mediaType: string): number {
-  const [targetType, targetSubtype] = mediaType.toLowerCase().split("/");
-  let q = 0;
-  for (const range of ranges) {
-    if (range.q <= 0) continue;
-    if (range.type === "*" && range.subtype === "*") {
-      q = Math.max(q, range.q);
-    } else if (range.type === targetType) {
-      if (range.subtype === "*" || range.subtype === targetSubtype) {
-        q = Math.max(q, range.q);
-      }
-    }
-  }
-  return q;
-}
-
 export function prefersMarkdown(request: Request): boolean {
   const accept = request.headers.get("accept") || "";
   const ranges = parseAcceptHeader(accept);
-  const htmlQuality = qualityForMediaType(ranges, "text/html");
-  const markdownQuality = qualityForMediaType(ranges, "text/markdown");
 
-  // Markdown only wins when it is explicitly preferred over HTML.
-  return markdownQuality > htmlQuality;
+  // Only an EXPLICIT text/markdown entry counts; wildcards like */* must not
+  // masquerade as Markdown support (otherwise */* would flip every browser
+  // request to Markdown).
+  const markdownRanges = ranges.filter(
+    (range) => range.type === "text" && range.subtype === "markdown",
+  );
+  const htmlRanges = ranges.filter(
+    (range) => range.type === "text" && range.subtype === "html",
+  );
+
+  const markdownQuality = markdownRanges.length
+    ? Math.max(...markdownRanges.map((range) => range.q))
+    : 0;
+  const htmlQuality = htmlRanges.length
+    ? Math.max(...htmlRanges.map((range) => range.q))
+    : 0;
+
+  // Markdown wins when it is explicitly requested and not strictly outranked
+  // by an explicit text/html entry. Equal quality (the common
+  // "text/markdown, text/html" case sent by crawlers) resolves to Markdown.
+  return markdownQuality > 0 && markdownQuality >= htmlQuality;
 }
 
 export function buildMarkdown404(request: Request): string {
