@@ -407,10 +407,10 @@ export function buildStaticPage(
   } else {
     html = html.replace("</head>", `  ${jsonLdTag}\n  </head>`);
   }
-  html = html.replace(
-    '<div id="root"></div>',
-    `<div id="root">${route.content}</div>`,
-  );
+  // Keep #root empty so the browser does not paint a static snapshot before
+  // React mounts (avoids the flash of prerendered HTML). Content stays available
+  // to agents and no-JS clients via the Markdown files and metadata above.
+  // (route.content is still used for Markdown generation.)
 
   return html;
 }
